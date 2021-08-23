@@ -83,9 +83,15 @@ public class Enemy : MonoBehaviour
         }
 
         //Try shoot the player
-        if(m_CanShoot) 
+        Vector2 aimDir = player.position - barrel.position;
+        RaycastHit2D checker = Physics2D.Raycast(barrel.position, aimDir, range, layer);
+                
+        if(checker.collider.CompareTag("Player")) 
         {
-            StartCoroutine(Shoot());
+            if(m_CanShoot) 
+            {
+                StartCoroutine(Shoot());
+            }
         }
     }
 
@@ -93,15 +99,19 @@ public class Enemy : MonoBehaviour
     {
         m_CanShoot = false;
 
+        //Calculate angle of shot
         Vector2 direction = player.position - barrel.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         angle -= 90f;
 
+        //Play animation and wait until it's finished to shoot
         anim.SetTrigger("shoot");
         yield return new WaitForSeconds(shootAnimTime);
 
+        //Spawn a bullet
         GameObject b = Instantiate(bullet, barrel.position, Quaternion.identity);
         b.transform.localEulerAngles = new Vector3(0f, 0f, angle);
+        b.GetComponent<Bullet>().damage = attackDamage;
 
         yield return new WaitForSeconds(m_TimeBetweenShots);
         m_CanShoot = true;

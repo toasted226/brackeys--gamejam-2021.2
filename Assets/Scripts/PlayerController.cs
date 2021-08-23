@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public int numOfBullets;
     public float spreadAngle;
     [Header("Health")]
-    public float health;
+    public int health;
 
     private Vector2 m_Movement;
     private Rigidbody2D m_Rigidbody;
@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
         m_CanShoot = true;
     }
 
-    public void TakeDamage(float damage) 
+    public void TakeDamage(int damage) 
     {
         health -= damage;
         playerAnim.SetTrigger("takeDamage");

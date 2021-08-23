@@ -35,10 +35,10 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        //TODO: check if is enemy or player, then call TakeDamage() for that object
+        //Check if is enemy or player, then call TakeDamage() for that object
         if(other.collider.CompareTag("Player")) 
         {
-            other.transform.GetComponent<PlayerController>().TakeDamage(damage);
+            other.transform.GetComponent<PlayerController>().TakeDamage(Mathf.RoundToInt(damage));
         }
         else if(other.collider.CompareTag("Enemy")) 
         {
