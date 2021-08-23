@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 2ec3aef262c8cfab584c6f5d70011696
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7336662815329784079
+    second: StaplerEnemy-Sheet_0
+  - first:
+      213: 3051862231844601486
+    second: StaplerEnemy-Sheet_1
+  - first:
+      213: -8892893676276237287
+    second: StaplerEnemy-Sheet_2
+  - first:
+      213: -6730425067011543937
+    second: StaplerEnemy-Sheet_3
+  - first:
+      213: 9215014339675692084
+    second: StaplerEnemy-Sheet_4
+  - first:
+      213: 2319776461646641839
+    second: StaplerEnemy-Sheet_5
+  - first:
+      213: -8519314878374725606
+    second: StaplerEnemy-Sheet_6
+  - first:
+      213: -3413041201050606109
+    second: StaplerEnemy-Sheet_7
+  - first:
+      213: 2890256415612982427
+    second: StaplerEnemy-Sheet_8
+  - first:
+      213: 413347088255898308
+    second: StaplerEnemy-Sheet_9
+  - first:
+      213: 8653542242964703425
+    second: StaplerEnemy-Sheet_10
+  - first:
+      213: -6230901922735980965
+    second: StaplerEnemy-Sheet_11
+  - first:
+      213: -8129362321027690517
+    second: StaplerEnemy-Sheet_12
+  - first:
+      213: -7408409600824187417
+    second: StaplerEnemy-Sheet_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +74,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,7 +83,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +117,339 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 769
+        width: 140
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f019c8095ff01d560800000000000000
+      internalID: 7336662815329784079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 770
+        width: 140
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e3788c7846a5a20800000000000000
+      internalID: 3051862231844601486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 771
+        width: 140
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cbc386158169480800000000000000
+      internalID: -8892893676276237287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 525
+        width: 140
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c64659f0ab892a0800000000000000
+      internalID: -6730425067011543937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 525
+        width: 140
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c108cf7be42ef70800000000000000
+      internalID: 9215014339675692084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 525
+        width: 140
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faab2c2b660813020800000000000000
+      internalID: 2319776461646641839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 525
+        width: 140
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1836c0614055c980800000000000000
+      internalID: -8519314878374725606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 525
+        width: 140
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e52b975c1172a0d0800000000000000
+      internalID: -3413041201050606109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 280
+        width: 140
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94d76295e04c1820800000000000000
+      internalID: 2890256415612982427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 280
+        width: 140
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c25f6c9cf08cb500800000000000000
+      internalID: 413347088255898308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 280
+        width: 140
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c88fb052de871870800000000000000
+      internalID: 8653542242964703425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 140
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ef509c6b36789a0800000000000000
+      internalID: -6230901922735980965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 140
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef03bc4a04be2f80800000000000000
+      internalID: -8129362321027690517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StaplerEnemy-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 140
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5e74038ba003990800000000000000
+      internalID: -7408409600824187417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
