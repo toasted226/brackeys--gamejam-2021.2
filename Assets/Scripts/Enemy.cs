@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using Pathfinding;
 
@@ -7,14 +8,26 @@ public class Enemy : MonoBehaviour
     public Transform target;
     public LayerMask layer;
     public Transform enemyGFX;
+    public Animator anim;
+    public GameObject bullet;
+    public Transform barrel;
 
     public float maxDistance;
     public float avoidDistance;
     public float range;
 
+    public float shootAnimTime;
+    public float attackDamage;
+    public float fireRate;
+
+    public float health;
+
+    private float m_MaxHealth;
     private Transform m_Target;
     private AIDestinationSetter m_Finder;
     private float m_DefaultScale;
+    private bool m_CanShoot = true;
+    private float m_TimeBetweenShots;
 
     private void Start() 
     {
@@ -23,6 +36,8 @@ public class Enemy : MonoBehaviour
         m_DefaultScale = enemyGFX.localScale.x;
         target = new GameObject().transform;
         m_Finder.target = target;
+        m_MaxHealth = health;
+        m_TimeBetweenShots = 1f / fireRate;
     }
 
     private void Update() 
@@ -66,5 +81,35 @@ public class Enemy : MonoBehaviour
         {
             target.position = player.position;
         }
+
+        //Try shoot the player
+        if(m_CanShoot) 
+        {
+            StartCoroutine(Shoot());
+        }
+    }
+
+    private IEnumerator Shoot() 
+    {
+        m_CanShoot = false;
+
+        Vector2 direction = player.position - barrel.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        angle -= 90f;
+
+        anim.SetTrigger("shoot");
+        yield return new WaitForSeconds(shootAnimTime);
+
+        GameObject b = Instantiate(bullet, barrel.position, Quaternion.identity);
+        b.transform.localEulerAngles = new Vector3(0f, 0f, angle);
+
+        yield return new WaitForSeconds(m_TimeBetweenShots);
+        m_CanShoot = true;
+    }
+
+    public void TakeDamage(float damage) 
+    {
+        anim.SetTrigger("takeDamage");
+        health -= damage;
     }
 }

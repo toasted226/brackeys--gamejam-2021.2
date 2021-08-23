@@ -128,4 +128,10 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(m_TimeBetweenShots);
         m_CanShoot = true;
     }
+
+    public void TakeDamage(float damage) 
+    {
+        health -= damage;
+        playerAnim.SetTrigger("takeDamage");
+    }
 }

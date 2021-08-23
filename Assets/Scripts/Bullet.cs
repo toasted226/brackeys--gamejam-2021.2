@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public bool isEnemyBullet;
     public float travelSpeed;
     public float lifetime;
     public Animator bulletAnim;
@@ -35,6 +36,15 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) 
     {
         //TODO: check if is enemy or player, then call TakeDamage() for that object
+        if(other.collider.CompareTag("Player")) 
+        {
+            other.transform.GetComponent<PlayerController>().TakeDamage(damage);
+        }
+        else if(other.collider.CompareTag("Enemy")) 
+        {
+            other.transform.GetComponent<Enemy>().TakeDamage(damage);
+        }
+
         StartCoroutine(Explode());
     }
 
