@@ -1,32 +1,36 @@
 using System.Collections;
 using UnityEngine;
 using Pathfinding;
+using System;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("References")]
     public Transform player;
-    public Transform target;
     public LayerMask layer;
     public Transform enemyGFX;
     public Animator anim;
     public GameObject bullet;
     public Transform barrel;
-
+    [Header("AI Movement")]
     public float maxDistance;
     public float avoidDistance;
     public float range;
-
+    public float moveSpeed;
+    [Header("Attack")]
     public float shootAnimTime;
     public float attackDamage;
     public float fireRate;
-
+    [Header("Life")]
     public float health;
+    public float deathAnimTime;
 
     private float m_MaxHealth;
     private Transform m_Target;
     private AIDestinationSetter m_Finder;
     private float m_DefaultScale;
     private bool m_CanShoot = true;
+    private bool m_Alive = true;
     private float m_TimeBetweenShots;
 
     private void Start() 
@@ -34,65 +38,86 @@ public class Enemy : MonoBehaviour
         //Initialisation
         m_Finder = GetComponent<AIDestinationSetter>();
         m_DefaultScale = enemyGFX.localScale.x;
-        target = new GameObject().transform;
-        m_Finder.target = target;
+        m_Target = new GameObject().transform;
+        m_Finder.target = m_Target;
         m_MaxHealth = health;
         m_TimeBetweenShots = 1f / fireRate;
     }
 
     private void Update() 
     {
-        float disToPlayer = Vector3.Distance(transform.position, player.position);
-        Vector2 direction = player.position - transform.position;
+        //Check if still alive
+        if(health > 0) 
+        {
+            float disToPlayer = Vector3.Distance(transform.position, player.position);
+            Vector2 direction = player.position - transform.position;
 
-        //Adjust sprite to look towards player
-        if(direction.x > 0f) 
-        {
-            enemyGFX.localScale = new Vector3(-m_DefaultScale, m_DefaultScale, 1f);
-        }
-        else if(direction.x < 0f)
-        {
-            enemyGFX.localScale = new Vector3(m_DefaultScale, m_DefaultScale, 1f);
-        }
-        
-        //Check if enemy is in range
-        if(disToPlayer <= maxDistance) 
-        {
-            //Check if enemy is too close
-            if(disToPlayer < avoidDistance) 
+            //Adjust sprite to look towards player
+            if(direction.x > 0f) 
             {
-                target.position = (-direction.normalized) * 5f; //Run away
+                enemyGFX.localScale = new Vector3(-m_DefaultScale, m_DefaultScale, 1f);
             }
-            else //Stand still if enemy can see player, else run towards them
+            else if(direction.x < 0f)
             {
-                RaycastHit2D hit2D = Physics2D.Raycast(transform.position, direction, range, layer);
-                
-                if(hit2D.collider.CompareTag("Player")) 
+                enemyGFX.localScale = new Vector3(m_DefaultScale, m_DefaultScale, 1f);
+            }
+            
+            //Check if enemy is in range
+            if(disToPlayer <= maxDistance) 
+            {
+                //Check if enemy is too close
+                if(disToPlayer < avoidDistance) 
                 {
-                    target.position = transform.position;
+                    m_Target.position = (-direction.normalized) * 5f; //Run away
                 }
-                else 
+                else //Stand still if enemy can see player, else run towards them
                 {
-                    target.position = player.position;
+                    RaycastHit2D hit2D = Physics2D.Raycast(transform.position, direction, range, layer);
+                    
+                    if(hit2D.collider.CompareTag("Player")) 
+                    {
+                        m_Target.position = transform.position;
+                    }
+                    else 
+                    {
+                        m_Target.position = player.position;
+                    }
                 }
             }
-        }
-        else //Run towards player if enemy is too far away
-        {
-            target.position = player.position;
-        }
+            else //Run towards player if enemy is too far away
+            {
+                m_Target.position = player.position;
+            }
 
-        //Try shoot the player
-        Vector2 aimDir = player.position - barrel.position;
-        RaycastHit2D checker = Physics2D.Raycast(barrel.position, aimDir, range, layer);
-                
-        if(checker.collider.CompareTag("Player")) 
-        {
-            if(m_CanShoot) 
+            //Try shoot the player
+            Vector2 aimDir = player.position - barrel.position;
+            RaycastHit2D checker = Physics2D.Raycast(barrel.position, aimDir, range, layer);
+                    
+            if(checker.collider.CompareTag("Player")) 
             {
-                StartCoroutine(Shoot());
+                if(m_CanShoot) 
+                {
+                    StartCoroutine(Shoot());
+                }
             }
         }
+        else 
+        {
+            if(m_Alive) 
+            {
+                StartCoroutine(Die());
+            }
+        }
+    }
+
+    private IEnumerator Die()
+    {
+        m_Alive = false;
+        anim.SetTrigger("die");
+        //Wait until death animation has played
+        yield return new WaitForSeconds(deathAnimTime);
+        //TODO: destroy enemy in some fancy way
+        Destroy(gameObject);
     }
 
     private IEnumerator Shoot() 
