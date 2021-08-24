@@ -33,16 +33,24 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
+    private void OnCollisionEnter2D(Collision2D c) 
     {
         //Check if is enemy or player, then call TakeDamage() for that object
-        if(other.collider.CompareTag("Player")) 
+        if(c.collider.CompareTag("Player")) 
         {
-            other.transform.GetComponent<PlayerController>().TakeDamage(Mathf.RoundToInt(damage));
+            if(isEnemyBullet) 
+            {
+                c.transform.GetComponent<PlayerController>().TakeDamage(Mathf.RoundToInt(damage));
+            }
         }
-        else if(other.collider.CompareTag("Enemy")) 
+        else if(c.collider.CompareTag("Enemy")) 
         {
-            other.transform.GetComponent<Enemy>().TakeDamage(damage);
+            c.transform.GetComponent<Enemy>().TakeDamage(damage);
+        }
+
+        if(c.collider.CompareTag("Paper") && !isEnemyBullet) 
+        {
+            return;
         }
 
         StartCoroutine(Explode());

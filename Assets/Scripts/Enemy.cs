@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using Pathfinding;
-using System;
 
 public class Enemy : MonoBehaviour
 {
@@ -16,27 +15,33 @@ public class Enemy : MonoBehaviour
     public float maxDistance;
     public float avoidDistance;
     public float range;
-    public float moveSpeed;
     [Header("Attack")]
     public float shootAnimTime;
     public float attackDamage;
     public float fireRate;
+    [Tooltip("Leave at 0 to disable burst fire")]
+    public int bulletsPerBurst;
+    public float timeBetweenBursts;
     [Header("Life")]
     public float health;
     public float deathAnimTime;
 
     private float m_MaxHealth;
     private Transform m_Target;
+    private AIPath m_Ai;
     private AIDestinationSetter m_Finder;
     private float m_DefaultScale;
     private bool m_CanShoot = true;
     private bool m_Alive = true;
     private float m_TimeBetweenShots;
+    private int m_BulletsFired;
+    private bool m_CanBurst = true;
 
     private void Start() 
     {
         //Initialisation
         m_Finder = GetComponent<AIDestinationSetter>();
+        m_Ai = GetComponent<AIPath>();
         m_DefaultScale = enemyGFX.localScale.x;
         m_Target = new GameObject().transform;
         m_Finder.target = m_Target;
@@ -49,6 +54,16 @@ public class Enemy : MonoBehaviour
         //Check if still alive
         if(health > 0) 
         {
+            //Check if enemy is walking
+            if(m_Ai.desiredVelocity.magnitude > 0.01f) 
+            {
+                anim.SetBool("isWalking", true);
+            }
+            else 
+            {
+                anim.SetBool("isWalking", false);
+            }
+
             float disToPlayer = Vector3.Distance(transform.position, player.position);
             Vector2 direction = player.position - transform.position;
 
@@ -95,14 +110,34 @@ public class Enemy : MonoBehaviour
                     
             if(checker.collider.CompareTag("Player")) 
             {
-                if(m_CanShoot) 
+                if(bulletsPerBurst == 0) 
                 {
-                    StartCoroutine(Shoot());
+                    if(m_CanShoot) 
+                    {
+                        StartCoroutine(Shoot());
+                    }
+                }
+                else 
+                {
+                    if(m_CanBurst && m_CanShoot) 
+                    {
+                        m_BulletsFired++;
+                        if(m_BulletsFired <= bulletsPerBurst) 
+                        {
+                            StartCoroutine(Shoot());
+                        }
+                        else 
+                        {
+                            m_CanBurst = false;
+                            StartCoroutine(WaitForNextBurst());
+                        }
+                    }
                 }
             }
         }
         else 
         {
+            //Die if not already dead
             if(m_Alive) 
             {
                 StartCoroutine(Die());
@@ -140,6 +175,13 @@ public class Enemy : MonoBehaviour
 
         yield return new WaitForSeconds(m_TimeBetweenShots);
         m_CanShoot = true;
+    }
+
+    private IEnumerator WaitForNextBurst() 
+    {
+        yield return new WaitForSeconds(timeBetweenBursts);
+        m_BulletsFired = 0;
+        m_CanBurst = true;
     }
 
     public void TakeDamage(float damage) 
