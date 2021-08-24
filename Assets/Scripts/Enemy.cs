@@ -89,13 +89,16 @@ public class Enemy : MonoBehaviour
                 {
                     RaycastHit2D hit2D = Physics2D.Raycast(transform.position, direction, range, layer);
                     
-                    if(hit2D.collider.CompareTag("Player")) 
+                    if(hit2D) 
                     {
-                        m_Target.position = transform.position;
-                    }
-                    else 
-                    {
-                        m_Target.position = player.position;
+                        if(hit2D.collider.CompareTag("Player")) 
+                        {
+                            m_Target.position = transform.position;
+                        }
+                        else 
+                        {
+                            m_Target.position = player.position;
+                        }
                     }
                 }
             }
@@ -107,29 +110,32 @@ public class Enemy : MonoBehaviour
             //Try shoot the player
             Vector2 aimDir = player.position - barrel.position;
             RaycastHit2D checker = Physics2D.Raycast(barrel.position, aimDir, range, layer);
-                    
-            if(checker.collider.CompareTag("Player")) 
-            {
-                if(bulletsPerBurst == 0) 
+
+            if(checker) 
+            {     
+                if(checker.collider.CompareTag("Player")) 
                 {
-                    if(m_CanShoot) 
+                    if(bulletsPerBurst == 0) 
                     {
-                        StartCoroutine(Shoot());
-                    }
-                }
-                else 
-                {
-                    if(m_CanBurst && m_CanShoot) 
-                    {
-                        m_BulletsFired++;
-                        if(m_BulletsFired <= bulletsPerBurst) 
+                        if(m_CanShoot) 
                         {
                             StartCoroutine(Shoot());
                         }
-                        else 
+                    }
+                    else 
+                    {
+                        if(m_CanBurst && m_CanShoot) 
                         {
-                            m_CanBurst = false;
-                            StartCoroutine(WaitForNextBurst());
+                            m_BulletsFired++;
+                            if(m_BulletsFired <= bulletsPerBurst) 
+                            {
+                                StartCoroutine(Shoot());
+                            }
+                            else 
+                            {
+                                m_CanBurst = false;
+                                StartCoroutine(WaitForNextBurst());
+                            }
                         }
                     }
                 }
