@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public Animator playerAnim;
     public Animator gunAnim;
+    public HealthManager healthManager;
     [Header("Attack")]
     public float moveSpeed;
     public float attackDamage;
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 m_Movement;
     private Rigidbody2D m_Rigidbody;
     private float m_TimeBetweenShots;
-    private float m_MaxHealth;
+    private int m_MaxHealth;
     private bool m_CanShoot = true;
 
     private void Start() 
@@ -34,6 +35,9 @@ public class PlayerController : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody2D>();
         m_TimeBetweenShots = 1f / fireRate; //Calculate time between shots from fire rate
         m_MaxHealth = health;
+        healthManager.health = m_MaxHealth;
+        healthManager.SpawnHearts();
+        healthManager.UpdateHealth();
     }
 
     private void Update() 
@@ -132,6 +136,8 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage) 
     {
         health -= damage;
+        healthManager.health = health;
+        healthManager.UpdateHealth();
         playerAnim.SetTrigger("takeDamage");
     }
 }
