@@ -6,7 +6,7 @@ public class CameraFollow : MonoBehaviour
     public Vector3 offset;
     public float smoothness;
 
-    private void Update() 
+    private void FixedUpdate() 
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 followPos = new Vector3
