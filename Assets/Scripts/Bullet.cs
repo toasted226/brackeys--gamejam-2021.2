@@ -51,6 +51,10 @@ public class Bullet : MonoBehaviour
                 e.TakeDamage(damage);
             }
         }
+        else if(c.collider.CompareTag("Boss")) 
+        {
+            c.transform.GetComponent<Boss>().TakeDamage(damage);
+        }
 
         if(c.collider.CompareTag("Paper") && !isEnemyBullet) 
         {

@@ -39,6 +39,8 @@ public class HomingPushPin : MonoBehaviour
         }
 
         Instantiate(FX, other.contacts[0].point, Quaternion.identity);
+        CameraShake cs = Camera.main.GetComponent<CameraShake>();
+        cs.StartCoroutine(cs.Shake(0.25f, 0.3f));
         Destroy(gameObject);
     }
 }

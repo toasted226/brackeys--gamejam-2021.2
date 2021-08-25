@@ -4,6 +4,7 @@ using UnityEngine.Tilemaps;
 
 public class Room : MonoBehaviour
 {
+    public Animator roomClearMessage;
     public TilemapCollider2D door;
     public List<GameObject> enemies;
 
@@ -22,9 +23,11 @@ public class Room : MonoBehaviour
                 
                 if(i == enemies.Count - 1) 
                 {
-                    //TODO: Display message that room is clear
                     door.isTrigger = true;
                     m_PlayerInRoom = false;
+
+                    roomClearMessage.SetTrigger("roomclear");
+
                     enemies.Clear();
                 }
             }
@@ -33,14 +36,21 @@ public class Room : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.transform.CompareTag("Player")) 
+        if(other.transform.CompareTag("Player") && enemies.Count > 0) 
         {
             if(!m_PlayerInRoom) 
             {
                 door.isTrigger = false;
                 foreach(var enemy in enemies) 
                 {
-                    enemy.GetComponent<Enemy>().enabled = true;
+                    if(enemy.GetComponent<Enemy>() != null) 
+                    {
+                        enemy.GetComponent<Enemy>().enabled = true;
+                    }
+                    else 
+                    {
+                        enemy.GetComponent<HomingPushPin>().enabled = true;
+                    }
                 }
                 m_PlayerInRoom = true;
             }

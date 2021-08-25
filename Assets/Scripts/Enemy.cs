@@ -31,11 +31,11 @@ public class Enemy : MonoBehaviour
     private AIPath m_Ai;
     private AIDestinationSetter m_Finder;
     private float m_DefaultScale;
-    private bool m_CanShoot = true;
+    private bool m_CanShoot;
     private bool m_Alive = true;
     private float m_TimeBetweenShots;
     private int m_BulletsFired;
-    private bool m_CanBurst = true;
+    private bool m_CanBurst;
 
     private void Start() 
     {
@@ -47,6 +47,9 @@ public class Enemy : MonoBehaviour
         m_Finder.target = m_Target;
         m_MaxHealth = health;
         m_TimeBetweenShots = 1f / fireRate;
+
+        StartCoroutine(WaitForNextShot());
+        StartCoroutine(WaitForNextBurst());
     }
 
     private void Update() 
@@ -158,6 +161,7 @@ public class Enemy : MonoBehaviour
         //Wait until death animation has played
         yield return new WaitForSeconds(deathAnimTime);
         //TODO: destroy enemy in some fancy way
+        Destroy(m_Target.gameObject);
         Destroy(gameObject);
     }
 
@@ -179,6 +183,11 @@ public class Enemy : MonoBehaviour
         b.transform.localEulerAngles = new Vector3(0f, 0f, angle);
         b.GetComponent<Bullet>().damage = attackDamage;
 
+        StartCoroutine(WaitForNextShot());
+    }
+
+    private IEnumerator WaitForNextShot() 
+    {
         yield return new WaitForSeconds(m_TimeBetweenShots);
         m_CanShoot = true;
     }
