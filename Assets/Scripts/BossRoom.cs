@@ -7,6 +7,7 @@ public class BossRoom : MonoBehaviour
     public TilemapCollider2D doors;
     public Transform boss;
     public Transform player;
+    public GameObject healthbar;
 
     private CameraFollow m_CameraFollow;
     private bool m_PlayedCinematic;
@@ -40,6 +41,8 @@ public class BossRoom : MonoBehaviour
 
             Camera.main.orthographicSize = 6;
             m_CameraFollow.player = player;
+
+            healthbar.SetActive(true);
 
             m_PlayedCinematic = true;
         }

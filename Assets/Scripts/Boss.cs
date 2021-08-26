@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Pathfinding;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class Boss : MonoBehaviour
     public GameObject fizzleFX;
     public GameObject deathFX;
     public GameObject aoeObj;
+    public GameObject healthbar;
+    public Image barMain;
+    public Image barDetail;
     public CameraFollow cam;
     public TilemapCollider2D doors;
     [Header("AI Movement")]
@@ -75,6 +79,9 @@ public class Boss : MonoBehaviour
 
     private void Update() 
     {
+        barMain.fillAmount = health / m_MaxHealth;
+        barDetail.fillAmount = barMain.fillAmount;
+
         //Check if still alive
         if(health > 0) 
         {
@@ -199,6 +206,8 @@ public class Boss : MonoBehaviour
             Bullet b = bullet.GetComponent<Bullet>();
             b.StartCoroutine(b.Explode());
         }
+
+        healthbar.SetActive(false);
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Static;
