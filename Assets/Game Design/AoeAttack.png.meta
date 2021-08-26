@@ -23,6 +23,33 @@ TextureImporter:
   - first:
       213: -4828651387299623799
     second: AoeAttack_10
+  - first:
+      213: -7159314138528530442
+    second: AoeAttack_6
+  - first:
+      213: -1943571533883191367
+    second: AoeAttack_12
+  - first:
+      213: -2988372748284411861
+    second: AoeAttack_13
+  - first:
+      213: -874416050701085724
+    second: AoeAttack_14
+  - first:
+      213: 6730270548825998549
+    second: AoeAttack_15
+  - first:
+      213: 6241194683989000472
+    second: AoeAttack_16
+  - first:
+      213: -4903349512042839443
+    second: AoeAttack_17
+  - first:
+      213: 6499006582554215800
+    second: AoeAttack_18
+  - first:
+      213: -1089214889736866908
+    second: AoeAttack_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -136,76 +163,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AoeAttack_3
-      rect:
-        serializedVersion: 2
-        x: 1984
-        y: 38
-        width: 417
-        height: 388
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f59b2aae80e9f7e0800000000000000
-      internalID: -1731105678402284042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AoeAttack_4
-      rect:
-        serializedVersion: 2
-        x: 2450
-        y: 8
-        width: 471
-        height: 449
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d16e7dadfc56ad090800000000000000
-      internalID: -8008977043920787939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AoeAttack_5
-      rect:
-        serializedVersion: 2
-        x: 2939
-        y: 0
-        width: 481
-        height: 470
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 596a10f23d18371a0800000000000000
-      internalID: -6812959067254708587
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: AoeAttack_7
       rect:
         serializedVersion: 2
-        x: 23
-        y: 38
-        width: 403
-        height: 373
+        x: 4408
+        y: 9
+        width: 473
+        height: 448
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +187,10 @@ TextureImporter:
       name: AoeAttack_8
       rect:
         serializedVersion: 2
-        x: 514
-        y: 38
-        width: 403
-        height: 373
+        x: 4898
+        y: 0
+        width: 484
+        height: 472
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,34 +205,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AoeAttack_9
-      rect:
-        serializedVersion: 2
-        x: 1004
-        y: 38
-        width: 402
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b865b19d64008fd0800000000000000
-      internalID: -2341866937590126413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: AoeAttack_10
       rect:
         serializedVersion: 2
-        x: 1493
-        y: 38
-        width: 404
-        height: 373
+        x: 5386
+        y: 0
+        width: 484
+        height: 472
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,6 +221,195 @@ TextureImporter:
       bones: []
       spriteID: 98c0fc3852f2dfcb0800000000000000
       internalID: -4828651387299623799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AoeAttack_6
+      rect:
+        serializedVersion: 2
+        x: 3944
+        y: 37
+        width: 418
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff339109b105ac90800000000000000
+      internalID: -7159314138528530442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AoeAttack_12
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 144
+        width: 184
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfc457ccfb0705e0800000000000000
+      internalID: -1943571533883191367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AoeAttack_13
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 112
+        width: 247
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20cc0a81da2786d0800000000000000
+      internalID: -2988372748284411861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AoeAttack_14
+      rect:
+        serializedVersion: 2
+        x: 1528
+        y: 69
+        width: 335
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3df081c337dd3f0800000000000000
+      internalID: -874416050701085724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AoeAttack_15
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 37
+        width: 405
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d40c09d769b66d50800000000000000
+      internalID: 6730270548825998549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AoeAttack_16
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 37
+        width: 404
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81188317f7d2d9650800000000000000
+      internalID: 6241194683989000472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AoeAttack_17
+      rect:
+        serializedVersion: 2
+        x: 2964
+        y: 37
+        width: 404
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d620a1d099dc3fbb0800000000000000
+      internalID: -4903349512042839443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AoeAttack_18
+      rect:
+        serializedVersion: 2
+        x: 3454
+        y: 37
+        width: 404
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875c11abd0c113a50800000000000000
+      internalID: 6499006582554215800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AoeAttack_21
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 178
+        width: 126
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3fa2524d452e0f0800000000000000
+      internalID: -1089214889736866908
       vertices: []
       indices: 
       edges: []

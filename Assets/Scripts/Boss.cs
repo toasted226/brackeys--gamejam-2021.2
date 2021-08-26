@@ -239,8 +239,11 @@ public class Boss : MonoBehaviour
     {
         for(int i = 0; i < numOfCircularBursts; i++) 
         {
-            yield return new WaitForSeconds(timeBetweenCircularBursts);
-            CircularBurst();
+            if(m_Alive) 
+            {
+                yield return new WaitForSeconds(timeBetweenCircularBursts);
+                CircularBurst();
+            }
         }
 
         yield return new WaitForSeconds(timeBetweenBursts);
