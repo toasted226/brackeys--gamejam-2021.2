@@ -9,6 +9,7 @@ TagManager:
   - HomingPushPin
   - Paper
   - Boss
+  - AOE
   layers:
   - Default
   - TransparentFX

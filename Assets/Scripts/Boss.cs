@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.Tilemaps;
 
 public class Boss : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Boss : MonoBehaviour
     public GameObject fizzleFX;
     public GameObject deathFX;
     public CameraFollow cam;
+    public TilemapCollider2D doors;
     [Header("AI Movement")]
     public float maxDistance;
     public float avoidDistance;
@@ -67,15 +69,6 @@ public class Boss : MonoBehaviour
         if(health > 0) 
         {
             #region AI Movement
-            //Check if enemy is walking
-            if(m_Ai.desiredVelocity.magnitude > 0.01f) 
-            {
-                anim.SetBool("isWalking", true);
-            }
-            else 
-            {
-                anim.SetBool("isWalking", false);
-            }
 
             float disToPlayer = Vector3.Distance(transform.position, player.position);
             Vector2 direction = player.position - transform.position;
@@ -158,7 +151,6 @@ public class Boss : MonoBehaviour
             }
             #endregion
 
-
         }
         else 
         {
@@ -204,6 +196,8 @@ public class Boss : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         cam.player = player;
+
+        doors.isTrigger = true;
 
         Destroy(gameObject);
     }
@@ -264,7 +258,7 @@ public class Boss : MonoBehaviour
     private IEnumerator Transform() 
     {
         anim.SetTrigger("transform");
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(4f);
 
         StartCoroutine(WaitForNextShot());
         StartCoroutine(WaitForNextBurst());

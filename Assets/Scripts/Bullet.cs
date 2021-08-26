@@ -53,7 +53,11 @@ public class Bullet : MonoBehaviour
         }
         else if(c.collider.CompareTag("Boss")) 
         {
-            c.transform.GetComponent<Boss>().TakeDamage(damage);
+            Boss b = c.transform.GetComponent<Boss>();
+            if(b.enabled) 
+            {
+                b.TakeDamage(damage);
+            }
         }
 
         if(c.collider.CompareTag("Paper") && !isEnemyBullet) 
