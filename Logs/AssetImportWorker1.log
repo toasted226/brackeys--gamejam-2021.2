@@ -1065,3 +1065,11 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 832.243057 seconds.
+  path: Assets/Prefabs/Doors_1.prefab
+  artifactKey: Guid(4459700cf5d12a4ce9a36cb38e2a99d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Doors_1.prefab using Guid(4459700cf5d12a4ce9a36cb38e2a99d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '722018cde7c1e3638cbbc416448b0f46') in 0.275795 seconds 
+  Import took 0.286861 seconds .
+
