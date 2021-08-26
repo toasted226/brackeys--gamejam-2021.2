@@ -289,38 +289,8 @@ public class Boss : MonoBehaviour
     {
         m_CanAoe = false;
 
-        Vector3 spawnPos;
-
-        if(m_PlayerController.m_Movement.x > 0) 
-        {
-            //Player is moving right
-            spawnPos = new Vector3
-            (
-                player.position.x + predictedOffset, 
-                player.position.y - 1f, 
-                player.position.z
-            );
-        }
-        else if(m_PlayerController.m_Movement.x < 0) 
-        {
-            //Player is moving left
-            spawnPos = new Vector3
-            (
-                player.position.x - predictedOffset, 
-                player.position.y - 1f, 
-                player.position.z
-            );
-        }
-        else 
-        {
-            //Player is standing still
-            spawnPos = new Vector3
-            (
-                player.position.x, 
-                player.position.y - 1f, 
-                player.position.z
-            );
-        }
+        Vector3 spawnPos = player.position + 
+            ((Vector3)m_PlayerController.m_Movement * predictedOffset);
 
         Instantiate(aoeObj, spawnPos, Quaternion.identity);
 
