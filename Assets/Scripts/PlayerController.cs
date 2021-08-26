@@ -22,12 +22,14 @@ public class PlayerController : MonoBehaviour
     public float spreadAngle;
     [Header("Health")]
     public int health;
+    public float invulnerableTime;
 
-    private Vector2 m_Movement;
+    [HideInInspector]public Vector2 m_Movement;
     private Rigidbody2D m_Rigidbody;
     private float m_TimeBetweenShots;
     private int m_MaxHealth;
     private bool m_CanShoot = true;
+    private bool m_CanTakeDamage = true;
 
     private void Start() 
     {
@@ -135,9 +137,20 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage) 
     {
-        health -= damage;
-        healthManager.health = health;
-        healthManager.UpdateHealth();
-        playerAnim.SetTrigger("takeDamage");
+        if(m_CanTakeDamage) 
+        {
+            health -= damage;
+            healthManager.health = health;
+            healthManager.UpdateHealth();
+            playerAnim.SetTrigger("takeDamage");
+
+            m_CanTakeDamage = false;
+            Invoke("AllowDamage", invulnerableTime);
+        }
+    }
+
+    private void AllowDamage() 
+    {
+        m_CanTakeDamage = true;
     }
 }

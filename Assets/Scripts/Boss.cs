@@ -15,6 +15,7 @@ public class Boss : MonoBehaviour
     public GameObject whiteFlash;
     public GameObject fizzleFX;
     public GameObject deathFX;
+    public GameObject aoeObj;
     public CameraFollow cam;
     public TilemapCollider2D doors;
     [Header("AI Movement")]
@@ -32,6 +33,10 @@ public class Boss : MonoBehaviour
     [Tooltip("Leave at 0 to disable burst fire")]
     public int bulletsPerBurst;
     public float timeBetweenBursts;
+    public int aoesPerBurst;
+    public float timeBetweenAoes;
+    public float timeBetweenAoeBursts;
+    public float predictedOffset;
     [Header("Life")]
     public float health;
     public float whiteFlashTime;
@@ -41,18 +46,23 @@ public class Boss : MonoBehaviour
     private Transform m_Target;
     private AIPath m_Ai;
     private AIDestinationSetter m_Finder;
+    private PlayerController m_PlayerController;
     private float m_DefaultScale;
     private bool m_CanShoot;
     private bool m_Alive = true;
     private float m_TimeBetweenShots;
     private int m_BulletsFired;
     private bool m_CanBurst;
+    private int m_AoesShot;
+    private bool m_CanAoeBurst = true;
+    private bool m_CanAoe = true;
 
     private void Start() 
     {
         //Initialisation
         m_Finder = GetComponent<AIDestinationSetter>();
         m_Ai = GetComponent<AIPath>();
+        m_PlayerController = player.GetComponent<PlayerController>();
 
         m_DefaultScale = enemyGFX.localScale.x;
         m_Target = new GameObject().transform;
@@ -151,6 +161,23 @@ public class Boss : MonoBehaviour
             }
             #endregion
 
+            if(health <= m_MaxHealth / 2f) 
+            {
+                if(m_CanAoeBurst && m_CanAoe) 
+                {
+                    m_AoesShot++;
+                    if(m_BulletsFired <= bulletsPerBurst) 
+                    {
+                        ShootAoe();
+                    }
+                    else 
+                    {
+                        m_CanBurst = false;
+                        StartCoroutine(WaitForNextAoeBurst());
+                    }
+                }
+            }
+
         }
         else 
         {
@@ -229,6 +256,12 @@ public class Boss : MonoBehaviour
         m_CanShoot = true;
     }
 
+    private IEnumerator WaitForNextAoeShot() 
+    {
+        yield return new WaitForSeconds(timeBetweenAoes);
+        m_CanAoe = true;
+    }
+
     private IEnumerator WaitForNextBurst() 
     {
         for(int i = 0; i < numOfCircularBursts; i++) 
@@ -243,6 +276,55 @@ public class Boss : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenBursts);
         m_BulletsFired = 0;
         m_CanBurst = true;
+    }
+
+    private IEnumerator WaitForNextAoeBurst() 
+    {
+        yield return new WaitForSeconds(timeBetweenAoeBursts);
+        m_AoesShot = 0;
+        m_CanAoeBurst = true;
+    }
+
+    private void ShootAoe() 
+    {
+        m_CanAoe = false;
+
+        Vector3 spawnPos;
+
+        if(m_PlayerController.m_Movement.x > 0) 
+        {
+            //Player is moving right
+            spawnPos = new Vector3
+            (
+                player.position.x + predictedOffset, 
+                player.position.y - 1f, 
+                player.position.z
+            );
+        }
+        else if(m_PlayerController.m_Movement.x < 0) 
+        {
+            //Player is moving left
+            spawnPos = new Vector3
+            (
+                player.position.x - predictedOffset, 
+                player.position.y - 1f, 
+                player.position.z
+            );
+        }
+        else 
+        {
+            //Player is standing still
+            spawnPos = new Vector3
+            (
+                player.position.x, 
+                player.position.y - 1f, 
+                player.position.z
+            );
+        }
+
+        Instantiate(aoeObj, spawnPos, Quaternion.identity);
+
+        StartCoroutine(WaitForNextAoeShot());
     }
 
     private IEnumerator WhiteFlash() 
@@ -266,24 +348,27 @@ public class Boss : MonoBehaviour
 
     private void CircularBurst()
     {
-        anim.SetTrigger("attack");
-
-        //Calculate angle of shot
-        Vector2 direction = player.position - barrel.position;
-        float dirAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        dirAngle -= 90f;
-
-        for(int i = 1; i < numOfBullets + 1; i++) 
+        if(m_Alive) 
         {
-            float angle;
-            if(i % 2 == 0) 
-                angle = spreadAngle * i;
-            else 
-                angle = -spreadAngle * i;
+            anim.SetTrigger("attack");
 
-            GameObject b = Instantiate(bullet, barrel.position, Quaternion.identity);
-            b.GetComponent<Bullet>().damage = attackDamage;
-            b.transform.localEulerAngles = new Vector3(0f, 0f, dirAngle + angle);
+            //Calculate angle of shot
+            Vector2 direction = player.position - barrel.position;
+            float dirAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            dirAngle -= 90f;
+
+            for(int i = 1; i < numOfBullets + 1; i++) 
+            {
+                float angle;
+                if(i % 2 == 0) 
+                    angle = spreadAngle * i;
+                else 
+                    angle = -spreadAngle * i;
+
+                GameObject b = Instantiate(bullet, barrel.position, Quaternion.identity);
+                b.GetComponent<Bullet>().damage = attackDamage;
+                b.transform.localEulerAngles = new Vector3(0f, 0f, dirAngle + angle);
+            }
         }
     }
 

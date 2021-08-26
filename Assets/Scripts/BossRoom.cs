@@ -32,7 +32,7 @@ public class BossRoom : MonoBehaviour
             m_CameraFollow.player = boss;
             Camera.main.orthographicSize = 4;
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(3f);
 
             boss.GetComponent<Boss>().enabled = true;
 

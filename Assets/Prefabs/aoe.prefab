@@ -100,7 +100,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 1.4
 --- !u!95 &5122474812702816864
 Animator:
   serializedVersion: 3
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSize: 1
-  growthMultiplier: 0.6
-  shrinkMultiplier: 5
+  growthMultiplier: 1
+  shrinkMultiplier: 0.75
   acceleration: 0.1
   boundary: 0.001
