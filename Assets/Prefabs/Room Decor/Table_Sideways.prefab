@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6618755224237550073}
   - component: {fileID: 6618755224237550074}
   - component: {fileID: 6618755224237550072}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Table_Sideways
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -129,8 +129,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.045535326, y: -0.07480788}
-  m_Size: {x: 0.94234324, y: 1.3968077}
+  m_Offset: {x: -0.025802612, y: -0.061837196}
+  m_Size: {x: 1.1369019, y: 1.7340431}
   m_Direction: 0
 --- !u!114 &2721267763937408451
 MonoBehaviour:
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2721267763937408457}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffa3ed5b97b790b65952e128dc6355d3, type: 3}
   m_Name: 
@@ -152,6 +152,8 @@ MonoBehaviour:
   anim: {fileID: 2721267764300730897}
   bullet: {fileID: 7937094641705770325, guid: d8f4f940c2ba543678000c94f6ab8199, type: 3}
   barrel: {fileID: 2721267765441853439}
+  healthPickup: {fileID: 7659759710850956027, guid: 75aa205be11eba22cbe71cf87eb398ca, type: 3}
+  healthSpawnChance: 5
   maxDistance: 6
   avoidDistance: 5
   range: 10
@@ -161,7 +163,7 @@ MonoBehaviour:
   bulletsPerBurst: 0
   timeBetweenBursts: 0
   health: 10
-  deathAnimTime: 1
+  deathAnimTime: 1.3
 --- !u!50 &2721267763937408449
 Rigidbody2D:
   serializedVersion: 4

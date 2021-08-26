@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Animator playerAnim;
     public Animator gunAnim;
     public HealthManager healthManager;
+    public Animator deathPanel;
     [Header("Attack")]
     public float moveSpeed;
     public float attackDamage;
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private int m_MaxHealth;
     private bool m_CanShoot = true;
     private bool m_CanTakeDamage = true;
+    private bool m_IsAlive = true;
 
     private void Start() 
     {
@@ -44,50 +47,82 @@ public class PlayerController : MonoBehaviour
 
     private void Update() 
     {
-        //Get input as movement vector
-        m_Movement = new Vector2(
-            Input.GetAxis("Horizontal"), 
-            Input.GetAxis("Vertical")
-            );
-        
-        //Check if the player is moving
-        if(Mathf.Abs(m_Movement.magnitude) > 0) 
+        if(health > 0) 
         {
-            playerAnim.SetBool("isWalking", true);
-        } 
-        else 
-        {
-            playerAnim.SetBool("isWalking", false);
-        }
-
-        //Allow the player to look around with the mouse
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 dirToMouse = mousePos - hand.position;
-        float lookAngle = Mathf.Atan2(dirToMouse.y, dirToMouse.x) * Mathf.Rad2Deg;
-        hand.localEulerAngles = new Vector3(0f, 0f, lookAngle - 90f);
-
-        //Check which direction the player is facing
-        if(dirToMouse.x > 0) 
-        {
-            //Facing right
-            playerGFX.localScale = new Vector3(1f, 1f, 1f);
-            gun.localEulerAngles = new Vector3(0f, 0f, gun.localEulerAngles.z);
-        } 
-        else if(dirToMouse.x < 0) 
-        {
-            //Facing left
-            playerGFX.localScale = new Vector3(-1f, 1f, 1f);
-            gun.localEulerAngles = new Vector3(0f, 180f, gun.localEulerAngles.z);
-        }
-
-        //Shoot when player clicks mouse
-        if(Input.GetButton("Fire1")) 
-        {
-            if(m_CanShoot) 
+            //Get input as movement vector
+            m_Movement = new Vector2(
+                Input.GetAxis("Horizontal"), 
+                Input.GetAxis("Vertical")
+                );
+            
+            //Check if the player is moving
+            if(Mathf.Abs(m_Movement.magnitude) > 0) 
             {
-                Shoot();
+                playerAnim.SetBool("isWalking", true);
+            } 
+            else 
+            {
+                playerAnim.SetBool("isWalking", false);
+            }
+
+            //Allow the player to look around with the mouse
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 dirToMouse = mousePos - hand.position;
+            float lookAngle = Mathf.Atan2(dirToMouse.y, dirToMouse.x) * Mathf.Rad2Deg;
+            hand.localEulerAngles = new Vector3(0f, 0f, lookAngle - 90f);
+
+            //Check which direction the player is facing
+            if(dirToMouse.x > 0) 
+            {
+                //Facing right
+                playerGFX.localScale = new Vector3(1f, 1f, 1f);
+                gun.localEulerAngles = new Vector3(0f, 0f, gun.localEulerAngles.z);
+            } 
+            else if(dirToMouse.x < 0) 
+            {
+                //Facing left
+                playerGFX.localScale = new Vector3(-1f, 1f, 1f);
+                gun.localEulerAngles = new Vector3(0f, 180f, gun.localEulerAngles.z);
+            }
+
+            //Shoot when player clicks mouse
+            if(Input.GetButton("Fire1")) 
+            {
+                if(m_CanShoot) 
+                {
+                    Shoot();
+                }
             }
         }
+        else 
+        {
+            if(m_IsAlive) 
+            {
+                m_IsAlive = false;
+                StartCoroutine(Die());
+            }
+        }
+    }
+
+    private IEnumerator Die() 
+    {
+        hand.transform.position = new Vector3
+        (
+            hand.transform.position.x,
+            hand.transform.position.y - 0.25f,
+            hand.transform.position.z
+        );
+
+        Time.timeScale = 0.4f;
+        Camera.main.orthographicSize = 4;
+        playerAnim.SetTrigger("die");
+        m_Rigidbody.bodyType = RigidbodyType2D.Static;
+
+        yield return new WaitForSeconds(1f);
+        deathPanel.SetTrigger("fade");
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void FixedUpdate() 
@@ -137,20 +172,34 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage) 
     {
-        if(m_CanTakeDamage) 
+        if(m_IsAlive) 
         {
-            health -= damage;
-            healthManager.health = health;
-            healthManager.UpdateHealth();
-            playerAnim.SetTrigger("takeDamage");
+            if(m_CanTakeDamage) 
+            {
+                health -= damage;
+                healthManager.health = health;
+                healthManager.UpdateHealth();
+                playerAnim.SetTrigger("takeDamage");
 
-            m_CanTakeDamage = false;
-            Invoke("AllowDamage", invulnerableTime);
+                m_CanTakeDamage = false;
+                Invoke("AllowDamage", invulnerableTime);
+            }
         }
     }
 
     private void AllowDamage() 
     {
         m_CanTakeDamage = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.CompareTag("Pickup") && health < m_MaxHealth) 
+        {
+            health += 1;
+            healthManager.health = health;
+            healthManager.UpdateHealth();
+            Destroy(other.gameObject);
+        }
     }
 }

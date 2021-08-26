@@ -241,7 +241,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7405469680998355254}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffa3ed5b97b790b65952e128dc6355d3, type: 3}
   m_Name: 
@@ -254,6 +254,8 @@ MonoBehaviour:
   anim: {fileID: 7405469680368413579}
   bullet: {fileID: 7674742578817592750, guid: 95a2100e2c9c334f4aa3ddb66645bc6a, type: 3}
   barrel: {fileID: 7405469681125270071}
+  healthPickup: {fileID: 7659759710850956027, guid: 75aa205be11eba22cbe71cf87eb398ca, type: 3}
+  healthSpawnChance: 10
   maxDistance: 8
   avoidDistance: 7
   range: 15
@@ -263,7 +265,7 @@ MonoBehaviour:
   bulletsPerBurst: 10
   timeBetweenBursts: 2
   health: 10
-  deathAnimTime: 1
+  deathAnimTime: 1.3
 --- !u!50 &7405469680998355255
 Rigidbody2D:
   serializedVersion: 4

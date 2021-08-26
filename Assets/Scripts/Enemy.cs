@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public GameObject bullet;
     public Transform barrel;
+    public GameObject healthPickup;
+    public float healthSpawnChance;
     [Header("AI Movement")]
     public float maxDistance;
     public float avoidDistance;
@@ -40,6 +42,7 @@ public class Enemy : MonoBehaviour
     private void Start() 
     {
         //Initialisation
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         m_Finder = GetComponent<AIDestinationSetter>();
         m_Ai = GetComponent<AIPath>();
         m_DefaultScale = enemyGFX.localScale.x;
@@ -160,6 +163,13 @@ public class Enemy : MonoBehaviour
         anim.SetTrigger("die");
         //Wait until death animation has played
         yield return new WaitForSeconds(deathAnimTime);
+
+        float c = Random.Range(0f, 100f);
+        if(c < healthSpawnChance) 
+        {
+            GameObject.Instantiate(healthPickup, transform.position, Quaternion.identity);
+        }
+
         //TODO: destroy enemy in some fancy way
         Destroy(m_Target.gameObject);
         Destroy(gameObject);

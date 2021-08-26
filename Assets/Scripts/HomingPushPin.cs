@@ -29,18 +29,21 @@ public class HomingPushPin : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        if(other.collider.CompareTag("Player")) 
+        if(enabled) 
         {
-            other.transform.GetComponent<PlayerController>().TakeDamage(Mathf.RoundToInt(damage));
-        }
-        else if(other.collider.CompareTag("Enemy")) 
-        {
-            other.transform.GetComponent<Enemy>().TakeDamage(damage);
-        }
+            if(other.collider.CompareTag("Player")) 
+            {
+                other.transform.GetComponent<PlayerController>().TakeDamage(Mathf.RoundToInt(damage));
+            }
+            else if(other.collider.CompareTag("Enemy")) 
+            {
+                other.transform.GetComponent<Enemy>().TakeDamage(damage);
+            }
 
-        Instantiate(FX, other.contacts[0].point, Quaternion.identity);
-        CameraShake cs = Camera.main.GetComponent<CameraShake>();
-        cs.StartCoroutine(cs.Shake(0.25f, 0.3f));
-        Destroy(gameObject);
+            Instantiate(FX, other.contacts[0].point, Quaternion.identity);
+            CameraShake cs = Camera.main.GetComponent<CameraShake>();
+            cs.StartCoroutine(cs.Shake(0.25f, 0.3f));
+            Destroy(gameObject);
+        }
     }
 }

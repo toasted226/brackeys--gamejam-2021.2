@@ -1239,3 +1239,4 @@ Received Import Request.
 Start importing Assets/Prefabs/aoe.prefab using Guid(7dfb38adc6bb7c01cb93a89b8e6390c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd92125bb82a71103612c0d93a53645ee') in 0.022535 seconds 
   Import took 0.034125 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

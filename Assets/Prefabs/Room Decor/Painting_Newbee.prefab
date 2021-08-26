@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2065648326006779715}
   - component: {fileID: 4253274867626078680}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Painting_Newbee
   m_TagString: Untagged
   m_Icon: {fileID: 0}

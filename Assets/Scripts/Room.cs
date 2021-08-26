@@ -12,16 +12,10 @@ public class Room : MonoBehaviour
     private bool m_PlayerInRoom;
 
     private void Start() 
-    {
-        Transform[] doorObjs = door.transform.GetComponentsInChildren<Transform>();
-        
-        if(doorObjs.Length > 1) 
+    {        
+        for(int i = 0; i < door.transform.childCount; i++) 
         {
-            for(int i = 1; i < doorObjs.Length; i++) 
-            {
-                doors.Add(doorObjs[i].gameObject);
-                doorObjs[i].gameObject.SetActive(false);
-            }
+            doors.Add(door.transform.GetChild(i).gameObject);
         }
     }
 
