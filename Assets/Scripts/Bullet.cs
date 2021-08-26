@@ -64,7 +64,7 @@ public class Bullet : MonoBehaviour
         StartCoroutine(Explode());
     }
 
-    private IEnumerator Explode() 
+    public IEnumerator Explode() 
     {
         m_IsActive = false;
         bulletAnim.SetTrigger("explode");

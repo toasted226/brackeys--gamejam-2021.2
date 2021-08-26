@@ -12,6 +12,9 @@ public class Boss : MonoBehaviour
     public GameObject bullet;
     public Transform barrel;
     public GameObject whiteFlash;
+    public GameObject fizzleFX;
+    public GameObject deathFX;
+    public CameraFollow cam;
     [Header("AI Movement")]
     public float maxDistance;
     public float avoidDistance;
@@ -30,6 +33,7 @@ public class Boss : MonoBehaviour
     [Header("Life")]
     public float health;
     public float whiteFlashTime;
+    public float dramaTime;
 
     private float m_MaxHealth;
     private Transform m_Target;
@@ -161,16 +165,46 @@ public class Boss : MonoBehaviour
             //Die if not already dead
             if(m_Alive) 
             {
-                Die();
+                StartCoroutine(Die());
             }
         }
     }
 
-    private void Die()
+    private IEnumerator Die()
     {
         m_Alive = false;
-        
+
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+        foreach(var bullet in bullets) 
+        {
+            Bullet b = bullet.GetComponent<Bullet>();
+            b.StartCoroutine(b.Explode());
+        }
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Static;
+        GetComponent<PolygonCollider2D>().enabled = false;
+
+        whiteFlash.SetActive(true);
+
+        cam.player = transform;
+        CameraShake cs = Camera.main.GetComponent<CameraShake>();
+        cs.StartCoroutine(cs.Shake(dramaTime + 0.5f, 0.35f));
+
+        Vector3 rotation = new Vector3(90f, 0f, 0f);
+        Quaternion q = Quaternion.Euler(rotation);
+        Instantiate(fizzleFX, transform.position, q);
+        yield return new WaitForSeconds(dramaTime);
+
+        Instantiate(deathFX, transform.position, q);
+
         Destroy(m_Target.gameObject);
+        enemyGFX.GetComponent<SpriteRenderer>().enabled = false;
+        whiteFlash.GetComponent<SpriteRenderer>().enabled = false;
+
+        yield return new WaitForSeconds(0.5f);
+        cam.player = player;
+
         Destroy(gameObject);
     }
 
@@ -218,7 +252,10 @@ public class Boss : MonoBehaviour
     {
         whiteFlash.SetActive(true);
         yield return new WaitForSeconds(whiteFlashTime);
-        whiteFlash.SetActive(false);
+        if(m_Alive) 
+        {
+            whiteFlash.SetActive(false);
+        }
     }
 
     private IEnumerator Transform() 
@@ -255,8 +292,10 @@ public class Boss : MonoBehaviour
 
     public void TakeDamage(float damage) 
     {
-        health -= damage;
-
-        StartCoroutine(WhiteFlash());
+        if(m_Alive) 
+        {
+            health -= damage;
+            StartCoroutine(WhiteFlash());
+        }
     }
 }
