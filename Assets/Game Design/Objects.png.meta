@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 7642980859614939925
-    second: Objects_0
+    second: HorizontalBookshelf_1
   - first:
       213: -174804484191063705
-    second: Objects_1
+    second: HorizontalBookshelf_2
   - first:
       213: 3275407576765064038
     second: Objects_2
@@ -19,40 +19,40 @@ TextureImporter:
     second: Objects_4
   - first:
       213: 2058049638561703503
-    second: Objects_5
+    second: VerticalBookShelf_2
   - first:
       213: -2746839580606631015
-    second: Objects_6
+    second: VerticalBookShelf_1
   - first:
       213: 5372264662783423788
-    second: Objects_7
+    second: VerticalTable
   - first:
       213: -6895716492971166485
-    second: Objects_8
+    second: ComputerTable
   - first:
       213: -4894898745955426128
-    second: Objects_9
+    second: IndoorPlant
   - first:
       213: 734368628706365288
-    second: Objects_10
+    second: IndoorPlantVertical
   - first:
       213: 8661651960862297898
-    second: Objects_11
+    second: SmallBossFrame
   - first:
       213: 2710443080846324409
-    second: Objects_12
+    second: HorizontalTable
   - first:
       213: -1312994402987499043
-    second: Objects_13
+    second: WhiteBoard
   - first:
       213: 8575179032478902733
-    second: Objects_14
+    second: HorizontalCouch
   - first:
       213: -4060402318970035109
-    second: Objects_15
+    second: VerticalCouch
   - first:
       213: 6234151420658722001
-    second: Objects_16
+    second: LargeBossFrame
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -166,7 +166,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Objects_0
+      name: HorizontalBookshelf_1
       rect:
         serializedVersion: 2
         x: 0
@@ -174,7 +174,7 @@ TextureImporter:
         width: 160
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,7 +187,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_1
+      name: HorizontalBookshelf_2
       rect:
         serializedVersion: 2
         x: 240
@@ -195,7 +195,7 @@ TextureImporter:
         width: 160
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,7 +216,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,7 +237,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -258,7 +258,7 @@ TextureImporter:
         width: 240
         height: 240
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -271,7 +271,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_5
+      name: VerticalBookShelf_2
       rect:
         serializedVersion: 2
         x: 1040
@@ -279,7 +279,7 @@ TextureImporter:
         width: 80
         height: 240
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -292,7 +292,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_6
+      name: VerticalBookShelf_1
       rect:
         serializedVersion: 2
         x: 1200
@@ -300,7 +300,7 @@ TextureImporter:
         width: 80
         height: 240
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -313,7 +313,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_7
+      name: VerticalTable
       rect:
         serializedVersion: 2
         x: 80
@@ -321,7 +321,7 @@ TextureImporter:
         width: 80
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -334,7 +334,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_8
+      name: ComputerTable
       rect:
         serializedVersion: 2
         x: 240
@@ -342,7 +342,7 @@ TextureImporter:
         width: 240
         height: 130
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -355,7 +355,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_9
+      name: IndoorPlant
       rect:
         serializedVersion: 2
         x: 550
@@ -363,7 +363,7 @@ TextureImporter:
         width: 90
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -376,7 +376,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_10
+      name: IndoorPlantVertical
       rect:
         serializedVersion: 2
         x: 705
@@ -384,7 +384,7 @@ TextureImporter:
         width: 95
         height: 155
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -397,7 +397,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_11
+      name: SmallBossFrame
       rect:
         serializedVersion: 2
         x: 880
@@ -405,7 +405,7 @@ TextureImporter:
         width: 80
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -418,7 +418,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_12
+      name: HorizontalTable
       rect:
         serializedVersion: 2
         x: 240
@@ -426,7 +426,7 @@ TextureImporter:
         width: 240
         height: 130
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -439,7 +439,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_13
+      name: WhiteBoard
       rect:
         serializedVersion: 2
         x: 975
@@ -447,7 +447,7 @@ TextureImporter:
         width: 240
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -460,7 +460,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_14
+      name: HorizontalCouch
       rect:
         serializedVersion: 2
         x: 0
@@ -468,7 +468,7 @@ TextureImporter:
         width: 160
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -481,7 +481,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_15
+      name: VerticalCouch
       rect:
         serializedVersion: 2
         x: 240
@@ -489,7 +489,7 @@ TextureImporter:
         width: 80
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -502,7 +502,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Objects_16
+      name: LargeBossFrame
       rect:
         serializedVersion: 2
         x: 480
@@ -510,7 +510,7 @@ TextureImporter:
         width: 240
         height: 240
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
