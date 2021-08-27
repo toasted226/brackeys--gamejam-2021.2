@@ -921,6 +921,66 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 102, y: 14, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 103, y: 14, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 104, y: 14, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 102, y: 16, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 103, y: 16, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 104, y: 16, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 57, y: 24, z: 0}
     second:
       serializedVersion: 2
@@ -953,7 +1013,7 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 10
+  - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: 5399e068c72995b04952db7eb7635b49, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 57783c5769e50f7068ca30ce968e469d, type: 2}
@@ -966,7 +1026,7 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 58c2b1adb8443c28f885bea28c6a4a91, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 10
+  - m_RefCount: 16
     m_Data: {fileID: -1745280011730706991, guid: 0a366eace48a4f67aa2691a40c8f26ce, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -6936079216851816805, guid: 0a366eace48a4f67aa2691a40c8f26ce, type: 3}
@@ -979,7 +1039,7 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: -784972302168420868, guid: 0a366eace48a4f67aa2691a40c8f26ce, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 28
+  - m_RefCount: 34
     m_Data:
       e00: 1
       e01: 0
@@ -998,7 +1058,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 28
+  - m_RefCount: 34
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -52374,7 +52434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAQIewNkB+AaQIAAA4FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVEtzmzAQ/isenWsPuH6E3lrsOD3kMXE7uXCRpcVoDBKjR2wn4//elQBDXC6I3W93v/12xScR0tTArNIbLfij4kB+jIg/k2+j3vkAJ7pXcis+oMO8CW4LD6IB80qtUGiPfZhRFVgt2E+5Lz04QqOTIle6WvM9pMpYg+aclgbQpZX10RJNnyNywtc48SFnPE2X/vSBpyQaXfDIQFrQPTReTGYJPi0+nswjfOIkbsOmk8XddBpFs2Q9jpYhhZOspFUN3PfTZ5p/b3Ms4gCT2GmL8MmYKkthWprEnusgQ0pr47BJBHBBse3AzeMLEPvCegbD4Oc8N2BbTTQ9r4RG9Zqs5JdqJK2oOTS83mnpfJ27wKhJ+fifd9wQzrWqHrqqceQr2EKwwys9M2rsQPGhefWVtpNHWh7oroS3AuST2mjlJEen1c6HOgPTVf95bSwtgB16e0P1xujqXu1uwN14fQ+X0PspLUW1867JrDFsSxXUDlsBGufyGwmHnTFtCrR6Fn8N/KH74XK1jnuhjUVX26X09HbKaQ8l66CZ78bZVGkJwdySrkHS0p5fMI29HeCNb1D2xnNP/TVqi7e+7nbchARzj4+iG9eLOl6HZQp1fARTPDtbCgk9ae94Qp1SJWWzX0NNurCt0zllg7C9E/zrahG2TGBK7xK6WPIdn7ExZ1GU5MkSKJ/PI56TsHtCYp+0fGmItvLg1GSfXOKedX+X0UbTOuw61/S4ER+VGhIUMldbpgHkc5Piyhw0VsFLyddcoEJbsFbIMHDymZFSsQPw7FozC62uT1bTrM+SkVq8K+stGUnD/yQjF3L5B1BLAwQUAAAICAAAECHsjp8Dcm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0UrK5ZapRooVlopl5SlKKSbJuSrKBgWWapXlqYoqpqUFKmlIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAECHsDZAfgGkCAAAOBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAECHsjp8Dcm0AAAB4AAAACQAkAAAAAAAAAAAAAAC2AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAG4DAAAAAA==
+    dataString: UEsDBBQAAAgIAAAQIexTXgjrYgIAAAMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK5yVlEifEe9t1CNlDHhWylYsvQhpjFbLk0iNAUvz7jmQbOywX5OmeUffM2F9EKNsAc9osjeCPmgP5OSHhTH5MBvAB9nSj1Up8Qs95F9xVgUQj55U6oTE+C2lW1+CMYL/URgZygkGvRKlNveAbyLV1FsMllRYQMtqFbIWhrwnZ4980CykHPF3Ow+kTT1kyOeKRgXJgBmp6dZFm+Ov4Vx37+uLqJk2TdDFN5jHPKyZp3QAPJob0WTLvMm/SyFPor6MEL0xLKWwnjrhDE83ntLEerSGBC4pmo6LAr0BsKheEj5Ofy9KC6zph6OFOGOxZW5X81m0ja2q3rbAPKn245zYqaks+/odOZxEuja4f+ltnSbjBVYJtX+mBUetGfR6H777L9mpH5ZauJbxXoJ700mivOILO+JDqLVzeDY8nY3kFbDvEW6lnQd8M7e7H2g81eDhG7/tcinodoIu0Daykjt2OuwAG5/IHBcdNsV0JjAYVfy280c14pTrgXhjrEOpcqiBvrb0JVLKIPQtuvMu1URDDnegGFJXu8IJl3PkAz7DRtWfIPQ0vT3d5h/XvxFlKDA/8JDmDXvTuNCxb6d0j2OrZOykUDKID8IR9yrVS7X6Ne9KnrbwpKRulbbzg31eLsHkGl/Q2ozdzvuYpm3KWJFmZzYHy6+uElyTunlDok8qXVmjXHpyaGoor3LP+mzJZGtrEXeeG7pbis9ajlgtV6hUzAOq5rXASDgYvwXeSL7jABq3AOaHivMlXQaRmW+DFqVARnS72ztBiqFKQRnxoFyIFyeNHpCBHcvwHUEsDBBQAAAgIAAAQIeyOnwNybQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrRSsrllqlGihWWimXlKUopJsm5KsoGBZZqleWpiiqmpQUqaUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAQIexTXgjrYgIAAAMFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAQIeyOnwNybQAAAHgAAAAJACQAAAAAAAAAAAAAAK8CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZwMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -64877,6 +64937,10 @@ PrefabInstance:
     - target: {fileID: 4520133322259400565, guid: 8649e6c6eab09834181ed35adf2bb349, type: 3}
       propertyPath: m_Name
       value: Boss_Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 4520133322259400565, guid: 8649e6c6eab09834181ed35adf2bb349, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4872215205470480638, guid: 8649e6c6eab09834181ed35adf2bb349, type: 3}
       propertyPath: m_RootOrder
