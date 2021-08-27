@@ -53,6 +53,9 @@ TextureImporter:
   - first:
       213: 6234151420658722001
     second: LargeBossFrame
+  - first:
+      213: -2969016694365801900
+    second: SofaBackView
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -518,6 +521,27 @@ TextureImporter:
       bones: []
       spriteID: 1d42c58efa7248650800000000000000
       internalID: 6234151420658722001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SofaBackView
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 80
+        width: 400
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4523f180c0febc6d0800000000000000
+      internalID: -2969016694365801900
       vertices: []
       indices: 
       edges: []
