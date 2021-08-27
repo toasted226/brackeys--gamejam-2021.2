@@ -177,23 +177,26 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator Shoot() 
     {
-        m_CanShoot = false;
+        if(m_Alive) 
+        {
+            m_CanShoot = false;
 
-        //Calculate angle of shot
-        Vector2 direction = player.position - barrel.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        angle -= 90f;
+            //Calculate angle of shot
+            Vector2 direction = player.position - barrel.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            angle -= 90f;
 
-        //Play animation and wait until it's finished to shoot
-        anim.SetTrigger("shoot");
-        yield return new WaitForSeconds(shootAnimTime);
+            //Play animation and wait until it's finished to shoot
+            anim.SetTrigger("shoot");
+            yield return new WaitForSeconds(shootAnimTime);
 
-        //Spawn a bullet
-        GameObject b = Instantiate(bullet, barrel.position, Quaternion.identity);
-        b.transform.localEulerAngles = new Vector3(0f, 0f, angle);
-        b.GetComponent<Bullet>().damage = attackDamage;
+            //Spawn a bullet
+            GameObject b = Instantiate(bullet, barrel.position, Quaternion.identity);
+            b.transform.localEulerAngles = new Vector3(0f, 0f, angle);
+            b.GetComponent<Bullet>().damage = attackDamage;
 
-        StartCoroutine(WaitForNextShot());
+            StartCoroutine(WaitForNextShot());
+        }
     }
 
     private IEnumerator WaitForNextShot() 
@@ -211,7 +214,10 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage) 
     {
-        anim.SetTrigger("takeDamage");
-        health -= damage;
+        if(m_Alive) 
+        {
+            anim.SetTrigger("takeDamage");
+            health -= damage;
+        }
     }
 }

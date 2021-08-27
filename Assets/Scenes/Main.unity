@@ -1654,7 +1654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da3938d4fe80d3138adaef096d5ce8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraSize: 6
+  cameraSize: 6.5
   roomClearMessage: {fileID: 3655695085420987184}
   door: {fileID: 176282460}
   enemies: []
