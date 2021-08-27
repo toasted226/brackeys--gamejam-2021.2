@@ -56,6 +56,12 @@ TextureImporter:
   - first:
       213: -2969016694365801900
     second: SofaBackView
+  - first:
+      213: 1955328530927145255
+    second: OfficeChair
+  - first:
+      213: -2925288176213767688
+    second: IndoorPlantHorizontal
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -534,7 +540,7 @@ TextureImporter:
         width: 400
         height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -542,6 +548,48 @@ TextureImporter:
       bones: []
       spriteID: 4523f180c0febc6d0800000000000000
       internalID: -2969016694365801900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OfficeChair
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 330
+        width: 90
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721591960f8b22b10800000000000000
+      internalID: 1955328530927145255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IndoorPlantHorizontal
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 280
+        width: 160
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9c02f07e94767d0800000000000000
+      internalID: -2925288176213767688
       vertices: []
       indices: 
       edges: []
