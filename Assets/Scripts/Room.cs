@@ -4,6 +4,7 @@ using UnityEngine.Tilemaps;
 
 public class Room : MonoBehaviour
 {
+    public float cameraSize = 5f;
     public Animator roomClearMessage;
     public TilemapCollider2D door;
     public List<GameObject> enemies;
@@ -50,6 +51,11 @@ public class Room : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
+        if(other.transform.CompareTag("Player")) 
+        {
+            Camera.main.orthographicSize = cameraSize;
+        }
+
         if(other.transform.CompareTag("Player") && enemies.Count > 0) 
         {
             if(!m_PlayerInRoom) 
