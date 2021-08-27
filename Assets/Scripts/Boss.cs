@@ -207,6 +207,12 @@ public class Boss : MonoBehaviour
             b.StartCoroutine(b.Explode());
         }
 
+        GameObject[] aoes = GameObject.FindGameObjectsWithTag("AOE");
+        foreach(var aoe in aoes) 
+        {
+            Destroy(aoe);
+        }
+
         healthbar.SetActive(false);
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();

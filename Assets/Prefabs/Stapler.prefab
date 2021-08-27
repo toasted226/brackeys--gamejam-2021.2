@@ -153,7 +153,7 @@ MonoBehaviour:
   bullet: {fileID: 7937094641705770325, guid: d8f4f940c2ba543678000c94f6ab8199, type: 3}
   barrel: {fileID: 2721267765441853439}
   healthPickup: {fileID: 7659759710850956027, guid: 75aa205be11eba22cbe71cf87eb398ca, type: 3}
-  healthSpawnChance: 5
+  healthSpawnChance: 15
   maxDistance: 6
   avoidDistance: 5
   range: 10

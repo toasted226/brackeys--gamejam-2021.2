@@ -14,6 +14,7 @@ public class HomingPushPin : MonoBehaviour
     private void Start() 
     {
         m_Rigidbody = GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void FixedUpdate() 

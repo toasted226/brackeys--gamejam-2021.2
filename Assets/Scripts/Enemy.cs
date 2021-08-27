@@ -192,6 +192,7 @@ public class Enemy : MonoBehaviour
 
             //Spawn a bullet
             GameObject b = Instantiate(bullet, barrel.position, Quaternion.identity);
+
             b.transform.localEulerAngles = new Vector3(0f, 0f, angle);
             b.GetComponent<Bullet>().damage = attackDamage;
 

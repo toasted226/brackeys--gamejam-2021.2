@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSize: 1
-  growthMultiplier: 1
+  growthMultiplier: 0.75
   shrinkMultiplier: 0.75
   acceleration: 0.1
   boundary: 0.001

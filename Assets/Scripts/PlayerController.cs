@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public Animator gunAnim;
     public HealthManager healthManager;
     public Animator deathPanel;
+    public AudioClip shotgunShoot;
+    public AudioClip shotgunReload;
     [Header("Attack")]
     public float moveSpeed;
     public float attackDamage;
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector]public Vector2 m_Movement;
     private Rigidbody2D m_Rigidbody;
+    private AudioSource m_AudioSource;
     private float m_TimeBetweenShots;
     private int m_MaxHealth;
     private bool m_CanShoot = true;
@@ -38,6 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         //Initialisation
         m_Rigidbody = GetComponent<Rigidbody2D>();
+        m_AudioSource = GetComponent<AudioSource>();
         m_TimeBetweenShots = 1f / fireRate; //Calculate time between shots from fire rate
         m_MaxHealth = health;
         healthManager.health = m_MaxHealth;
@@ -156,6 +160,10 @@ public class PlayerController : MonoBehaviour
             b.GetComponent<Bullet>().damage = attackDamage;
         }
 
+        //Play sound effect
+        m_AudioSource.clip = shotgunShoot;
+        m_AudioSource.Play();
+
         //Disable shooting temporarily until canShoot, so a feeling of fire rate is achieved
         m_CanShoot = false;
         StartCoroutine(WaitUntilCanShoot());
@@ -165,6 +173,8 @@ public class PlayerController : MonoBehaviour
     {
         //Wait the time between shots then allow shooting again
         yield return new WaitForSeconds(timeBeforeReload);
+        m_AudioSource.clip = shotgunReload;
+        m_AudioSource.Play();
         gunAnim.SetTrigger("reload");
         yield return new WaitForSeconds(m_TimeBetweenShots);
         m_CanShoot = true;
