@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 11279181394685346}
   - component: {fileID: 282032212163380080}
   - component: {fileID: 4453281883065288801}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VerticalBookShelf_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

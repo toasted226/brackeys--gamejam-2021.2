@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1110958599601897475}
   - component: {fileID: 696795551129774665}
   - component: {fileID: 8272198528672758073}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SofaBackView
   m_TagString: Untagged
   m_Icon: {fileID: 0}

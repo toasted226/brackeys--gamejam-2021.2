@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6272546036883726832}
   - component: {fileID: 794095757572883642}
   - component: {fileID: 7530633438521733495}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VerticalCouch
   m_TagString: Untagged
   m_Icon: {fileID: 0}

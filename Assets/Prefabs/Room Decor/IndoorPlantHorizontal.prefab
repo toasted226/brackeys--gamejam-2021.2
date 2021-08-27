@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9135054246389225917}
   - component: {fileID: 5187713084533212418}
   - component: {fileID: 6912402181023533720}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IndoorPlantHorizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
