@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5943606037328790750}
   - component: {fileID: 5943606037328790751}
   - component: {fileID: 1137692062}
+  - component: {fileID: -4625637429550845372}
   m_Layer: 3
   m_Name: Pot_Plant_1
-  m_TagString: Untagged
+  m_TagString: Destroyable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 938189117
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 8
   m_Sprite: {fileID: -4894898745955426128, guid: e83b9f4bc463c24b9a948df8f5f9d7ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,3 +100,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.26188946}
   serializedVersion: 2
   m_Radius: 0.36311054
+--- !u!114 &-4625637429550845372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943606037328790748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7286f3cfef8cf3a9205dd9347b224d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectHealth: 10

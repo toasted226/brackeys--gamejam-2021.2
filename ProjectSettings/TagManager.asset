@@ -11,6 +11,7 @@ TagManager:
   - Boss
   - AOE
   - Pickup
+  - Destroyable
   layers:
   - Default
   - TransparentFX
