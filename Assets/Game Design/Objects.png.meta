@@ -62,6 +62,12 @@ TextureImporter:
   - first:
       213: -2925288176213767688
     second: IndoorPlantHorizontal
+  - first:
+      213: -3803466081661082397
+    second: LampWall
+  - first:
+      213: 2752588384504392991
+    second: LampTable
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -561,7 +567,7 @@ TextureImporter:
         width: 90
         height: 135
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -582,7 +588,7 @@ TextureImporter:
         width: 160
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -590,6 +596,48 @@ TextureImporter:
       bones: []
       spriteID: 8f9c02f07e94767d0800000000000000
       internalID: -2925288176213767688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LampWall
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 345
+        width: 200
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4285710cf573bc0800000000000000
+      internalID: -3803466081661082397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LampTable
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 0
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d20474d88233620800000000000000
+      internalID: 2752588384504392991
       vertices: []
       indices: 
       edges: []
