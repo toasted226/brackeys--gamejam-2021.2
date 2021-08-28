@@ -74035,7 +74035,7 @@ MonoBehaviour:
   doors: {fileID: 176282460}
   attackSound: {fileID: 8300000, guid: 62d9941dd833a123bb1d77224042c82d, type: 3}
   transformSound: {fileID: 8300000, guid: ab46fa7a68434124ca9f6b7ab82af1d0, type: 3}
-  credits: {fileID: 0}
+  credits: {fileID: 1322475556}
   maxDistance: 6
   avoidDistance: 5
   range: 50
@@ -74052,7 +74052,7 @@ MonoBehaviour:
   timeBetweenAoes: 1.5
   timeBetweenAoeBursts: 10
   predictedOffset: 2
-  health: 150
+  health: 120
   whiteFlashTime: 0.1
   dramaTime: 2.5
 --- !u!82 &2721267764132565536
