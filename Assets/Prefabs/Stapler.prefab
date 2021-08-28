@@ -159,7 +159,7 @@ MonoBehaviour:
   range: 10
   shootAnimTime: 0.3
   attackDamage: 1
-  fireRate: 2
+  fireRate: 1.5
   bulletsPerBurst: 0
   timeBetweenBursts: 0
   health: 10

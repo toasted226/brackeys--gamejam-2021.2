@@ -54745,7 +54745,7 @@ MonoBehaviour:
   moveSpeed: 4
   attackDamage: 1
   timeBeforeReload: 0.4
-  fireRate: 1.5
+  fireRate: 1.75
   numOfBullets: 3
   spreadAngle: 4
   health: 5

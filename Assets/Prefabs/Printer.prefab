@@ -262,8 +262,8 @@ MonoBehaviour:
   range: 15
   shootAnimTime: 0.1
   attackDamage: 1
-  fireRate: 8
-  bulletsPerBurst: 10
+  fireRate: 6
+  bulletsPerBurst: 8
   timeBetweenBursts: 2
   health: 10
   deathAnimTime: 1.3
