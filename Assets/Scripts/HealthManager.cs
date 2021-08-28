@@ -13,23 +13,6 @@ public class HealthManager : MonoBehaviour
 
     [HideInInspector]public int health;
 
-    public void SpawnHearts() 
-    {
-        for(int i = 0; i < health; i++) 
-        {
-            GameObject h = Instantiate(heart, Vector3.zero, Quaternion.identity);
-            h.transform.SetParent(transform);
-            RectTransform pos = h.GetComponent<RectTransform>();
-            pos.localPosition = new Vector3
-                (
-                    startingX + 250f + (i * offset),
-                    height - 50f, 
-                    0f
-                );
-            hearts.Add(h.GetComponent<Heart>());
-        }
-    }
-
     public void UpdateHealth() 
     {
         if(health >= 0) 

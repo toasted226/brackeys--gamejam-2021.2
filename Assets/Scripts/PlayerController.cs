@@ -47,7 +47,6 @@ public class PlayerController : MonoBehaviour
         m_TimeBetweenShots = 1f / fireRate; //Calculate time between shots from fire rate
         m_MaxHealth = health;
         healthManager.health = m_MaxHealth;
-        healthManager.SpawnHearts();
         healthManager.UpdateHealth();
     }
 
