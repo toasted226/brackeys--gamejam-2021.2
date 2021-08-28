@@ -53088,7 +53088,7 @@ MonoBehaviour:
   heart: {fileID: 8247755512905330874, guid: 2162ac33b760896ddba384e1c71155d1, type: 3}
   height: 0
   startingX: -190
-  offset: 110
+  offset: 120
   hearts: []
   health: 0
 --- !u!4 &479476890 stripped
