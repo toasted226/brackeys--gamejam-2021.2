@@ -3,6 +3,7 @@ using UnityEngine;
 public class Destroyable : MonoBehaviour
 {
     public int objectHealth;
+    public GameObject explosionFX;
 
     private SpriteRenderer m_SpriteRenderer;
     private Material m_DefaultMat;
@@ -22,6 +23,7 @@ public class Destroyable : MonoBehaviour
         
         if(objectHealth <= 0) 
         {
+            Instantiate(explosionFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 

@@ -113,3 +113,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectHealth: 10
+  explosionFX: {fileID: 8998979612365294277, guid: 33fc4e8148fb50a8195236c397e1373d, type: 3}
