@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     public float avoidDistance;
     public float range;
     [Header("Attack")]
+    public bool hasAudio;
     public float shootAnimTime;
     public float attackDamage;
     public float fireRate;
@@ -32,6 +33,7 @@ public class Enemy : MonoBehaviour
     private Transform m_Target;
     private AIPath m_Ai;
     private AIDestinationSetter m_Finder;
+    private AudioSource m_AudioSource;
     private float m_DefaultScale;
     private bool m_CanShoot;
     private bool m_Alive = true;
@@ -42,6 +44,11 @@ public class Enemy : MonoBehaviour
     private void Start() 
     {
         //Initialisation
+        if(hasAudio) 
+        {
+            m_AudioSource = GetComponent<AudioSource>();
+        }
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
         m_Finder = GetComponent<AIDestinationSetter>();
         m_Ai = GetComponent<AIPath>();
@@ -189,6 +196,12 @@ public class Enemy : MonoBehaviour
             //Play animation and wait until it's finished to shoot
             anim.SetTrigger("shoot");
             yield return new WaitForSeconds(shootAnimTime);
+
+            //Play sound fx
+            if(hasAudio) 
+            {
+                m_AudioSource.Play();
+            }
 
             //Spawn a bullet
             GameObject b = Instantiate(bullet, barrel.position, Quaternion.identity);

@@ -24,6 +24,7 @@ public class Boss : MonoBehaviour
     public TilemapCollider2D doors;
     public AudioClip attackSound;
     public AudioClip transformSound;
+    public GameObject credits;
     [Header("AI Movement")]
     public float maxDistance;
     public float avoidDistance;
@@ -244,6 +245,9 @@ public class Boss : MonoBehaviour
         cam.player = player;
 
         doors.isTrigger = true;
+
+        credits.SetActive(true);
+        m_PlayerController.enabled = false;
 
         Destroy(gameObject);
     }

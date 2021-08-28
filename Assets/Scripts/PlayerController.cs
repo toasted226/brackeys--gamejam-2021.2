@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]public Vector2 m_Movement;
     private Rigidbody2D m_Rigidbody;
     private AudioSource m_AudioSource;
+    private CameraShake m_CameraShake;
     private float m_TimeBetweenShots;
     private int m_MaxHealth;
     private bool m_CanShoot = true;
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
         //Initialisation
         m_Rigidbody = GetComponent<Rigidbody2D>();
         m_AudioSource = GetComponent<AudioSource>();
+        m_CameraShake = Camera.main.GetComponent<CameraShake>();
         m_TimeBetweenShots = 1f / fireRate; //Calculate time between shots from fire rate
         m_MaxHealth = health;
         healthManager.health = m_MaxHealth;
@@ -162,6 +164,7 @@ public class PlayerController : MonoBehaviour
 
         //Play sound effect
         m_AudioSource.clip = shotgunShoot;
+        m_CameraShake.StartCoroutine(m_CameraShake.Shake(0.2f, 0.1f));
         m_AudioSource.Play();
 
         //Disable shooting temporarily until canShoot, so a feeling of fire rate is achieved
