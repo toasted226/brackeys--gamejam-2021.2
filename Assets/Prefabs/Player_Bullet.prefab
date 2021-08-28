@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1659573377053169103}
   - component: {fileID: 1659573377053169102}
   - component: {fileID: 1659573377053169101}
+  - component: {fileID: 421451009791364158}
   m_Layer: 0
   m_Name: BulletGFX
   m_TagString: Untagged
@@ -102,6 +103,47 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &421451009791364158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659573377053168944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.755
+  m_Color: {r: 0.6132076, g: 0.39196894, b: 0.14173195, a: 1}
+  m_Intensity: 3
+  m_LightVolumeOpacity: 1
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 4501954018552059696, guid: 52e10ca9f0e43ff068a0737d95d2145b, type: 3}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.06
+  m_PointLightOuterRadius: 0.26
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -1.0215096, y: -1.0527992, z: 0}
+  - {x: 1.1883905, y: -1.1049502, z: 0}
+  - {x: 1.0006486, y: 0.85462594, z: 0}
+  - {x: -1.0110797, y: 1.0006483, z: 0}
 --- !u!1 &4511297094661213744
 GameObject:
   m_ObjectHideFlags: 0
