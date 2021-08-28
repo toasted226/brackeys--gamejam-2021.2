@@ -15,11 +15,11 @@ C:/Users/dell/Documents/GitHub/brackeys--gamejam-2021.2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64361
+63146
 Successfully changed project path to: C:/Users/dell/Documents/GitHub/brackeys--gamejam-2021.2
 C:/Users/dell/Documents/GitHub/brackeys--gamejam-2021.2
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 167.35 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 164.07 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.15f2 (6cf78cb77498)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/2020.3.15f2/Editor/Data/Resources/UnitySubsystems
@@ -36,93 +36,93 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/2020.3.15f2/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/2020.3.15f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/2020.3.15f2/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56136
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56600
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/2020.3.15f2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/2020.3.15f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005149 seconds.
+Registered in 0.006064 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 159.91 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 150.60 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.092 seconds
+- Completed reload, in  3.051 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3093ms)
-		BeginReloadAssembly (133ms)
+	ReloadAssembly (3051ms)
+		BeginReloadAssembly (126ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (2ms)
-		EndReloadAssembly (1149ms)
-			LoadAssemblies (125ms)
+		EndReloadAssembly (1195ms)
+			LoadAssemblies (124ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (436ms)
+			SetupTypeCache (473ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (79ms)
-			SetupLoadedEditorAssemblies (463ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (489ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (160ms)
+				RefreshPlugins (151ms)
 				BeforeProcessingInitializeOnLoad (34ms)
-				ProcessInitializeOnLoadAttributes (191ms)
-				ProcessInitializeOnLoadMethodAttributes (66ms)
+				ProcessInitializeOnLoadAttributes (216ms)
+				ProcessInitializeOnLoadMethodAttributes (76ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.012023 seconds.
+Registered in 0.012548 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 145.11 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 174.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.332 seconds
+- Completed reload, in  3.415 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3334ms)
-		BeginReloadAssembly (357ms)
+	ReloadAssembly (3417ms)
+		BeginReloadAssembly (398ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (40ms)
-		EndReloadAssembly (2820ms)
-			LoadAssemblies (255ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (2823ms)
+			LoadAssemblies (281ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (821ms)
+			SetupTypeCache (829ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (131ms)
-			SetupLoadedEditorAssemblies (1277ms)
+			RebuildScriptCaches (144ms)
+			SetupLoadedEditorAssemblies (1262ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
+				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (145ms)
-				BeforeProcessingInitializeOnLoad (275ms)
-				ProcessInitializeOnLoadAttributes (802ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
+				RefreshPlugins (175ms)
+				BeforeProcessingInitializeOnLoad (274ms)
+				ProcessInitializeOnLoadAttributes (757ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
 				AfterProcessingInitializeOnLoad (14ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (14ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.24 seconds
-Refreshing native plugins compatible for Editor in 1.92 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.17 seconds
+Refreshing native plugins compatible for Editor in 1.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3438 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 149.6 MB.
-System memory in use after: 149.8 MB.
+System memory in use before: 149.8 MB.
+System memory in use after: 150.0 MB.
 
 Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 3877.
-Total: 5.763100 ms (FindLiveObjects: 0.491700 ms CreateObjectMapping: 0.325500 ms MarkObjects: 4.751200 ms  DeleteObjects: 0.191300 ms)
+Total: 6.128600 ms (FindLiveObjects: 0.736200 ms CreateObjectMapping: 0.364600 ms MarkObjects: 4.853700 ms  DeleteObjects: 0.171200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -136,590 +136,116 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93da851f3c109b508a600c35b5bb73d7') in 0.510942 seconds 
-  Import took 0.524461 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 32.144590 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6557429c8492277cf5a37c158dfa8791') in 0.042283 seconds 
-  Import took 0.068897 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.666555 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5dfb32e64c145456832be490bd0f367') in 0.039595 seconds 
-  Import took 0.058207 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.272686 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32d9752cb926b70fafd77d7ac96e3e2b') in 0.042388 seconds 
-  Import took 0.062529 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.141000 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ce1e8ff47923c2963b7a73b68acad44') in 0.111429 seconds 
-  Import took 0.133702 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006003 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ce1e8ff47923c2963b7a73b68acad44') in 0.039062 seconds 
-  Import took 0.058861 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.067160 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e322e32e56d208ee3d9cbe4edf1f9637') in 0.035481 seconds 
-  Import took 0.055221 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.036007 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '939fbf9608c79f683b57e44afe4543fe') in 0.041026 seconds 
-  Import took 0.055999 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.888645 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd074d488fd8cd256faad094c09c312ce') in 0.042046 seconds 
-  Import took 0.057417 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.366656 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64ab971acb9a6f7b9ebedad6cc521b01') in 0.037066 seconds 
-  Import took 0.057661 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.836324 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e74d60b2307c11fb4dfcf178c7d1635d') in 0.050559 seconds 
-  Import took 0.067005 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.188557 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ad1f0f094aa5114e43ac0a824026c3a') in 0.036538 seconds 
-  Import took 0.052550 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.541942 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ebfa38054a768f35b21f5cc49f596c') in 0.039165 seconds 
-  Import took 0.056091 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.949994 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8df7e7c2332143dd539ea64f9ee75120') in 0.041328 seconds 
-  Import took 0.058260 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.272727 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ac857e7b91e5f7377908567318ed70') in 0.037528 seconds 
-  Import took 0.052421 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.942311 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c20b4e5918379a399587a6ed7fe47e03') in 0.041630 seconds 
-  Import took 0.061090 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.794507 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06a204d8cc58c40f79e93890609f3da4') in 0.035656 seconds 
-  Import took 0.052924 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.937557 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62b7fc124acb3826cd3048c9b39042ea') in 0.039158 seconds 
-  Import took 0.057096 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.861636 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7532550905fe08ab9adcbdcb78bb40d4') in 0.039397 seconds 
-  Import took 0.055722 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.084427 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0843de5be8109653907f0da3ad9c0d9d') in 0.030071 seconds 
-  Import took 0.042644 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.785828 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '272c4c8abaf33be91cb9be7ce922ae49') in 0.038729 seconds 
-  Import took 0.052994 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.168947 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '754dbe0355c8c37bbd0df7e8ad2c720c') in 0.034340 seconds 
-  Import took 0.055315 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.640685 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdc90f8e4d770c9c2a7dc3a65306a2ad') in 0.041000 seconds 
-  Import took 0.056163 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.635785 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5ea035c922ff923b832326473f2ea2f') in 0.030773 seconds 
-  Import took 0.046863 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.266850 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e2a37557179881b046a565245b6d8ec') in 0.031078 seconds 
-  Import took 0.045179 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.250221 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d68791b346264601cde58a31e3f56e5') in 0.034740 seconds 
-  Import took 0.051458 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.083484 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89499ca2706b5940146bf2145b1e5440') in 0.035027 seconds 
-  Import took 0.051490 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.551096 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44aceaf6fece17b11aa91cbf3ec0465e') in 0.098639 seconds 
-  Import took 0.121102 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.102091 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03164fa26cd01f3471c266b4e3662e69') in 0.054879 seconds 
-  Import took 0.075556 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.867938 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6a932802dfb6e16255067aa518b7b8f') in 0.058392 seconds 
-  Import took 0.074185 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 40.908347 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01c69ea2c85ec26d493b26b106f8ad43') in 0.040076 seconds 
-  Import took 0.057311 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 233.784862 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4637babe6bf3a9f55fca370d1fd539b') in 0.062806 seconds 
-  Import took 0.088896 seconds .
+  path: Assets/Prefabs/Lights/Light Bulb.prefab
+  artifactKey: Guid(64592e0f3fbc2784b9ce0050af396e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Lights/Light Bulb.prefab using Guid(64592e0f3fbc2784b9ce0050af396e07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaa0944ad1e31f789c6fa84ac0093b6c') in 0.112781 seconds 
+  Import took 0.126877 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.011050 seconds.
+Registered in 0.010789 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.56 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.03 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.301 seconds
+- Completed reload, in  2.896 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3302ms)
-		BeginReloadAssembly (371ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (21ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (111ms)
-		EndReloadAssembly (2745ms)
-			LoadAssemblies (251ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (846ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (115ms)
-			SetupLoadedEditorAssemblies (1046ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (20ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (296ms)
-				ProcessInitializeOnLoadAttributes (697ms)
-				ProcessInitializeOnLoadMethodAttributes (13ms)
-				AfterProcessingInitializeOnLoad (15ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (49ms)
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.59 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3307 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.0 MB.
-System memory in use after: 146.2 MB.
-
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 3926.
-Total: 7.454600 ms (FindLiveObjects: 0.537800 ms CreateObjectMapping: 0.387600 ms MarkObjects: 6.481600 ms  DeleteObjects: 0.044700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 15.798389 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd2dd62d4301c842235e2d8357ea7fc0') in 0.332776 seconds 
-  Import took 0.346401 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.395616 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee6085b1945954d39415a368c3350711') in 0.039214 seconds 
-  Import took 0.053906 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.364317 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de9101077b7300f9e211e7df440f8cf8') in 0.042040 seconds 
-  Import took 0.053964 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 34.768124 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24ed8bfeabd1de63a5ec6fbeac4a2868') in 0.044937 seconds 
-  Import took 0.060597 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.457465 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed7ddc1cc957521aae7ce9138127f987') in 0.050150 seconds 
-  Import took 0.065315 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.843649 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cdb3dc81014b77d3b276c9773e001bf') in 0.043538 seconds 
-  Import took 0.057355 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.446869 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '451fca3d3494e131b96ff7e8af26847a') in 0.040053 seconds 
-  Import took 0.054924 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.933649 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '120a5239fb5381f073318b71a6bc251b') in 0.052805 seconds 
-  Import took 0.066686 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.673659 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5d6c61e5708648fbbb9a9a65c7ace16') in 0.054511 seconds 
-  Import took 0.067483 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.010654 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd36cc5a90c5629359fc3829612b3f697') in 0.027868 seconds 
-  Import took 0.043095 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.088720 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18cf21a22e8aa18616875d210cd9b1d') in 0.082945 seconds 
-  Import took 0.112993 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.002411 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1fc4905fcf051ab1ac0ee730faa4ca0') in 0.037345 seconds 
-  Import took 0.051959 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.743841 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c329e6c571d9bef4df180b6a2042be3') in 0.046280 seconds 
-  Import took 0.061736 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.611500 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '631bc232d0972ccda8eb8a8d3a53cc41') in 0.039029 seconds 
-  Import took 0.052110 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.536661 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '238c0f262daafe411f9ea03378281a7f') in 0.045124 seconds 
-  Import took 0.057670 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.000150 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70906ece48f5e2b47cc2703f7d5e23e7') in 0.033696 seconds 
-  Import took 0.048437 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.705981 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f2a7fdacffbc5e8d445ca24d41b5740') in 0.059641 seconds 
-  Import took 0.094876 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.383485 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a0fb5f85715a7936ae050ba74214ade') in 0.051039 seconds 
-  Import took 0.066148 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.099170 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e66801fcc6567332becd37b9c466d55a') in 0.040374 seconds 
-  Import took 0.057996 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011027 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.04 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.110 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3111ms)
-		BeginReloadAssembly (276ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (18ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (96ms)
-		EndReloadAssembly (2663ms)
-			LoadAssemblies (218ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (844ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (110ms)
-			SetupLoadedEditorAssemblies (1122ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (417ms)
-				ProcessInitializeOnLoadAttributes (661ms)
-				ProcessInitializeOnLoadMethodAttributes (12ms)
-				AfterProcessingInitializeOnLoad (14ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (47ms)
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.80 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3307 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.1 MB.
-System memory in use after: 146.4 MB.
-
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 3966.
-Total: 7.703500 ms (FindLiveObjects: 0.646600 ms CreateObjectMapping: 0.487600 ms MarkObjects: 6.520100 ms  DeleteObjects: 0.046400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 122.931038 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a298a6ff3e28822ed08db22413a812f4') in 0.391081 seconds 
-  Import took 0.410811 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.641844 seconds.
-  path: Assets/Prefabs/Printer_Bullet.prefab
-  artifactKey: Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Printer_Bullet.prefab using Guid(95a2100e2c9c334f4aa3ddb66645bc6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f210204685b72375f8498702844f8ad') in 0.028517 seconds 
-  Import took 0.043634 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011564 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.45 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.489 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3490ms)
-		BeginReloadAssembly (277ms)
+	ReloadAssembly (2896ms)
+		BeginReloadAssembly (256ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (19ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (92ms)
-		EndReloadAssembly (3061ms)
-			LoadAssemblies (250ms)
+			CreateAndSetChildDomain (80ms)
+		EndReloadAssembly (2497ms)
+			LoadAssemblies (217ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (857ms)
+			SetupTypeCache (800ms)
 			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (125ms)
-			SetupLoadedEditorAssemblies (1307ms)
+			RebuildScriptCaches (119ms)
+			SetupLoadedEditorAssemblies (983ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (1ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (2ms)
 				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (326ms)
-				ProcessInitializeOnLoadAttributes (927ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
-				AfterProcessingInitializeOnLoad (19ms)
+				BeforeProcessingInitializeOnLoad (257ms)
+				ProcessInitializeOnLoadAttributes (670ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (14ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (84ms)
+			AwakeInstancesAfterBackupRestoration (36ms)
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.26 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.21 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3307 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.3 MB.
-System memory in use after: 146.5 MB.
+System memory in use before: 140.7 MB.
+System memory in use after: 141.0 MB.
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 4006.
-Total: 13.461100 ms (FindLiveObjects: 0.859800 ms CreateObjectMapping: 0.386100 ms MarkObjects: 12.164000 ms  DeleteObjects: 0.047800 ms)
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 3881.
+Total: 8.035000 ms (FindLiveObjects: 0.489300 ms CreateObjectMapping: 0.321500 ms MarkObjects: 7.181500 ms  DeleteObjects: 0.039300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012359 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.711 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2712ms)
+		BeginReloadAssembly (230ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (14ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (79ms)
+		EndReloadAssembly (2338ms)
+			LoadAssemblies (221ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (752ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (131ms)
+			SetupLoadedEditorAssemblies (925ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (242ms)
+				ProcessInitializeOnLoadAttributes (639ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (15ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (34ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3307 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 140.8 MB.
+System memory in use after: 141.0 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 3885.
+Total: 7.083300 ms (FindLiveObjects: 0.793400 ms CreateObjectMapping: 0.571700 ms MarkObjects: 5.672700 ms  DeleteObjects: 0.042600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
