@@ -22,6 +22,8 @@ public class Boss : MonoBehaviour
     public Image barDetail;
     public CameraFollow cam;
     public TilemapCollider2D doors;
+    public AudioClip attackSound;
+    public AudioClip transformSound;
     [Header("AI Movement")]
     public float maxDistance;
     public float avoidDistance;
@@ -51,6 +53,7 @@ public class Boss : MonoBehaviour
     private AIPath m_Ai;
     private AIDestinationSetter m_Finder;
     private PlayerController m_PlayerController;
+    private AudioSource m_AudioSource;
     private float m_DefaultScale;
     private bool m_CanShoot;
     private bool m_Alive = true;
@@ -67,6 +70,7 @@ public class Boss : MonoBehaviour
         m_Finder = GetComponent<AIDestinationSetter>();
         m_Ai = GetComponent<AIPath>();
         m_PlayerController = player.GetComponent<PlayerController>();
+        m_AudioSource = GetComponent<AudioSource>();
 
         m_DefaultScale = enemyGFX.localScale.x;
         m_Target = new GameObject().transform;
@@ -279,6 +283,9 @@ public class Boss : MonoBehaviour
 
     private IEnumerator WaitForNextBurst() 
     {
+        m_AudioSource.clip = attackSound;
+        m_AudioSource.Play();
+
         for(int i = 0; i < numOfCircularBursts; i++) 
         {
             if(m_Alive) 
@@ -324,6 +331,8 @@ public class Boss : MonoBehaviour
 
     private IEnumerator Transform() 
     {
+        m_AudioSource.clip = transformSound;
+        m_AudioSource.Play();
         anim.SetTrigger("transform");
         yield return new WaitForSeconds(4f);
 

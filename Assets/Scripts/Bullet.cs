@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public bool hasAudio;
     public bool isEnemyBullet;
     public float travelSpeed;
     public float lifetime;
@@ -11,9 +12,15 @@ public class Bullet : MonoBehaviour
     [HideInInspector]public float damage;
 
     private bool m_IsActive = true;
+    private AudioSource m_AudioSource;
 
     private void Start() 
     {
+        if(hasAudio) 
+        {
+            m_AudioSource = GetComponent<AudioSource>();
+        }
+
         StartCoroutine(Delete());
     }
 
@@ -71,6 +78,10 @@ public class Bullet : MonoBehaviour
     public IEnumerator Explode() 
     {
         m_IsActive = false;
+        if(hasAudio) 
+        {
+            m_AudioSource.Play();
+        }
         bulletAnim.SetTrigger("explode");
         GetComponent<CircleCollider2D>().enabled = false;
         yield return new WaitForSeconds(explodeAnimTime);
