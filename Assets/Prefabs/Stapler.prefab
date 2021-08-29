@@ -164,7 +164,7 @@ MonoBehaviour:
   fireRate: 1.5
   bulletsPerBurst: 0
   timeBetweenBursts: 0
-  health: 10
+  health: 8
   deathAnimTime: 1.3
 --- !u!50 &2721267763937408449
 Rigidbody2D:

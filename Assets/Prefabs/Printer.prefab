@@ -260,12 +260,13 @@ MonoBehaviour:
   maxDistance: 8
   avoidDistance: 7
   range: 15
+  hasAudio: 0
   shootAnimTime: 0.1
   attackDamage: 1
   fireRate: 6
   bulletsPerBurst: 8
   timeBetweenBursts: 2
-  health: 10
+  health: 8
   deathAnimTime: 1.3
 --- !u!50 &7405469680998355255
 Rigidbody2D:
