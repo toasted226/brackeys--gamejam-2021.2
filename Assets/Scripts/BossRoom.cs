@@ -8,15 +8,14 @@ public class BossRoom : MonoBehaviour
     public Transform boss;
     public Transform player;
     public GameObject healthbar;
+    public AudioClip bossMusic;
 
     private CameraFollow m_CameraFollow;
-    private AudioSource m_AudioSource;
     private bool m_PlayedCinematic;
 
     private void Start() 
     {
         m_CameraFollow = Camera.main.transform.GetComponentInParent<CameraFollow>();
-        m_AudioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -24,7 +23,10 @@ public class BossRoom : MonoBehaviour
         if(other.CompareTag("Player")) 
         {
             //Why do I hear boss music?
-            m_AudioSource.Play();
+            AudioSource music = Camera.main.GetComponent<AudioSource>();
+            music.clip = bossMusic;
+            music.Play();
+            
             StartCoroutine(EntranceCinematic());
         }
     }
