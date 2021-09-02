@@ -21,12 +21,7 @@ public class BossRoom : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if(other.CompareTag("Player")) 
-        {
-            //Why do I hear boss music?
-            AudioSource music = Camera.main.GetComponent<AudioSource>();
-            music.clip = bossMusic;
-            music.Play();
-            
+        {            
             StartCoroutine(EntranceCinematic());
         }
     }
@@ -35,6 +30,11 @@ public class BossRoom : MonoBehaviour
     {
         if(!m_PlayedCinematic) 
         {
+            //Why do I hear boss music?
+            AudioSource music = Camera.main.GetComponent<AudioSource>();
+            music.clip = bossMusic;
+            music.Play();
+
             doors.isTrigger = false;
             m_CameraFollow.player = boss;
             Camera.main.orthographicSize = 4;
